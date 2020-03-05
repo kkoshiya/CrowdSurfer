@@ -20,7 +20,9 @@ ActiveRecord::Schema.define(version: 2020_03_04_035652) do
     t.string "title"
     t.string "body"
     t.string "catagory"
-    t.integer "date"
+    t.date "date"
+    t.integer "current_total"
+    t.integer "target"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

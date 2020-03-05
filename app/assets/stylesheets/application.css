@@ -59,9 +59,6 @@ table {
 }
 
 
-
-
-
 #hidden {
   display: none;
 }
@@ -223,9 +220,8 @@ table {
   margin-top: 5%;
   background-color: white;
   position: relative;
-  border: 1px solid black;
   min-width: 350px;
-  min-height: 500px
+  min-height: 400px
 }
 
 .form_background {
@@ -254,6 +250,15 @@ table {
   box-shadow: 2px 2px 1px darkgreen;
 }
 
+#demo {
+  background-color: lightgreen;
+  height: 30px;
+  width: 250px;
+}
+
+#demo:hover {
+  box-shadow: 2px 2px 1px darkgreen;
+}
 
 #form_input {
   height: 30px;
@@ -283,3 +288,27 @@ table {
   font-size: 18px;
   margin-top: 12px;
 }
+
+
+#background-img {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+#rocket {
+  z-index: -1;
+  position: absolute;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes example {
+  0%   {left: 110%; top: 110%;}
+  100% {left : 5%; top: 15%;}
+}
+
+
