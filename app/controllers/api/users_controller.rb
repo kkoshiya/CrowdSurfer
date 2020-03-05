@@ -5,7 +5,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login(@user)
-      render json: ["you signed in"], status: 200
+      render "api/users/show"
     else
       render json: ["Nobody signed in"], status: 422
     end
