@@ -6,11 +6,11 @@ class IndexBody extends React.Component {
 
   render() {
     return (
-      <div id="index_body">
-        <div id="focus">
+      <div id="index-body">
+        <div id="focus-body">
           <Focus />
         </div>
-        <div id="side">
+        <div id="side-body">
           <Side />
         </div>
       </div>

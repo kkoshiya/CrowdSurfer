@@ -86,6 +86,56 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/project_actions.js":
+/*!*********************************************!*\
+  !*** ./frontend/actions/project_actions.js ***!
+  \*********************************************/
+/*! exports provided: RECEIVE_PROJECTS, RECEIVE_PROJECT, fetchProjects, fetchProject */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PROJECTS", function() { return RECEIVE_PROJECTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_PROJECT", function() { return RECEIVE_PROJECT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProjects", function() { return fetchProjects; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProject", function() { return fetchProject; });
+/* harmony import */ var _util_project_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/project_api_util */ "./frontend/util/project_api_util.js");
+
+var RECEIVE_PROJECTS = "RECEIVE_PROJECTS";
+var RECEIVE_PROJECT = "RECEIVE_PROJECT";
+
+var receiveProjects = function receiveProjects(projects) {
+  return {
+    type: RECEIVE_PROJECTS,
+    projects: projects
+  };
+};
+
+var receiveProject = function receiveProject(project) {
+  return {
+    type: RECEIVE_PROJECT,
+    project: project
+  };
+};
+
+var fetchProjects = function fetchProjects() {
+  return function (dispatch) {
+    // debugger
+    return _util_project_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchProjects"]().then(function (projects) {
+      return dispatch(receiveProjects(projects));
+    });
+  };
+};
+var fetchProject = function fetchProject(projectId) {
+  return function (dispatch) {
+    return _util_project_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchProject"](projectId).then(function (project) {
+      return dispatch(receiveProject(project));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/session_actions.js":
 /*!*********************************************!*\
   !*** ./frontend/actions/session_actions.js ***!
@@ -255,10 +305,28 @@ var Bar = /*#__PURE__*/function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "bar_container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "bar-middle"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "bar"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/arts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Arts")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Comics/Illistrations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Design/Tech"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Film"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Food/Craft"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Music"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Publishing")));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        id: "bar-link"
+      }, "Arts")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        id: "bar-link"
+      }, "Comics/Illistrations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        id: "bar-link"
+      }, "Design/Tech"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        id: "bar-link"
+      }, "Film"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        id: "bar-link"
+      }, "Food/Craft"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        id: "bar-link"
+      }, "Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        id: "bar-link"
+      }, "Music"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        id: "bar-link"
+      }, "Publishing"))));
     }
   }]);
 
@@ -329,10 +397,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 var Focus = /*#__PURE__*/function (_React$Component) {
   _inherits(Focus, _React$Component);
 
-  function Focus() {
+  function Focus(props) {
     _classCallCheck(this, Focus);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Focus).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Focus).call(this, props));
   }
 
   _createClass(Focus, [{
@@ -343,7 +411,7 @@ var Focus = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         id: "featured"
       }, "FEATURED PROJECT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "focus-body"
+        id: "focus-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "featured_pic",
         src: "https://ksr-static.imgix.net/makeway-8a0773e.gif?ixlib=rb-2.1.0&s=306cd2e2e89ba732a94d9e04beac63ce"
@@ -373,6 +441,8 @@ var Focus = /*#__PURE__*/function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _focus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./focus */ "./frontend/components/body/focus/focus.jsx");
+/* harmony import */ var _actions_project_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../actions/project_actions */ "./frontend/actions/project_actions.js");
+
 
 
 
@@ -381,7 +451,14 @@ var mSTP = function mSTP(state) {
 };
 
 var mDTP = function mDTP(dispatch) {
-  return {};
+  return {
+    fetchProject: function fetchProject(projectId) {
+      return dispatch(Object(_actions_project_actions__WEBPACK_IMPORTED_MODULE_2__["fetchProject"])(projectId));
+    },
+    fetchProjects: function fetchProjects() {
+      return dispatch(Object(_actions_project_actions__WEBPACK_IMPORTED_MODULE_2__["fetchProjects"])());
+    }
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_focus__WEBPACK_IMPORTED_MODULE_1__["default"]));
@@ -436,11 +513,11 @@ var IndexBody = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "index_body"
+        id: "index-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "focus"
+        id: "focus-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_focus_focus_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "side"
+        id: "side-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_side_side_container__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
     }
   }]);
@@ -489,6 +566,7 @@ var mDTP = function mDTP(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _side_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./side_item */ "./frontend/components/body/side/side_item.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -509,26 +587,34 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Side = /*#__PURE__*/function (_React$Component) {
   _inherits(Side, _React$Component);
 
-  function Side() {
+  function Side(props) {
     _classCallCheck(this, Side);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Side).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Side).call(this, props));
   }
 
   _createClass(Side, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchProjects();
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "side"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        id: "recomended-text"
+      }, "RECOMENDED"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         id: "side_posts"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "RECOMENDED FOR YOU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "https://ksr-ugc.imgix.net/assets/027/766/348/7006fcfa3caaefd8b2943eb5cfc34454_original.jpg?ixlib=rb-2.1.0&crop=faces&w=352&h=198&fit=crop&v=1579137135&auto=format&frame=1&q=92&s=ea7ad312a7f8502370202da77cfc4d64"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "https://ksr-static.imgix.net/x28ur5jf-zine-quest-2.jpg?ixlib=rb-2.1.0&auto=compress%2Cformat&w=1000&fit=min&s=0c13757197cdf9dff3c97760edc8315c"
+      }, this.props.projects.map(function (project) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_side_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          project: project
+        }));
       }))));
     }
   }]);
@@ -551,18 +637,61 @@ var Side = /*#__PURE__*/function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _side__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./side */ "./frontend/components/body/side/side.jsx");
+/* harmony import */ var _actions_project_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../actions/project_actions */ "./frontend/actions/project_actions.js");
+
 
 
 
 var mSTP = function mSTP(state) {
-  return {};
+  return {
+    projects: Object.values(state.entities.projects)
+  };
 };
 
 var mDTP = function mDTP(dispatch) {
-  return {};
+  return {
+    fetchProject: function fetchProject(projectId) {
+      return dispatch(Object(_actions_project_actions__WEBPACK_IMPORTED_MODULE_2__["fetchProject"])(projectId));
+    },
+    fetchProjects: function fetchProjects() {
+      return dispatch(Object(_actions_project_actions__WEBPACK_IMPORTED_MODULE_2__["fetchProjects"])());
+    }
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_side__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/body/side/side_item.jsx":
+/*!*****************************************************!*\
+  !*** ./frontend/components/body/side/side_item.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var SideItem = function SideItem(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "side-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "side-img",
+    src: "assets/background.png"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "side-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    id: "side-title"
+  }, props.project.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    id: "side-target"
+  }, Math.floor(props.project.current_total / props.project.target * 100), "% funded"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By ", props.project.user.name)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SideItem);
 
 /***/ }),
 
@@ -997,7 +1126,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         className: "login-form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         id: "form-type-display"
-      }, this.props.display), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.props.display), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.errors), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
         id: formId
@@ -1063,7 +1192,8 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state) {
   return {
     loggedIn: Boolean(state.session.currentUser),
-    display: "Log in"
+    display: "Log in",
+    errors: state.errors.session
   };
 };
 
@@ -1421,13 +1551,71 @@ document.addEventListener("DOMContentLoaded", function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_reducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./user_reducer */ "./frontend/reducers/user_reducer.js");
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _projects_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projects_reducer */ "./frontend/reducers/projects_reducer.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 
 
-var entitesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_1__["combineReducers"])({
-  users: _user_reducer__WEBPACK_IMPORTED_MODULE_0__["default"]
+
+var entitesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_2__["combineReducers"])({
+  users: _user_reducer__WEBPACK_IMPORTED_MODULE_0__["default"],
+  projects: _projects_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitesReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/errors_reducer.js":
+/*!*********************************************!*\
+  !*** ./frontend/reducers/errors_reducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./session_errors_reducer */ "./frontend/reducers/session_errors_reducer.js");
+
+
+var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  session: _session_errors_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+});
+/* harmony default export */ __webpack_exports__["default"] = (errorsReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/projects_reducer.js":
+/*!***********************************************!*\
+  !*** ./frontend/reducers/projects_reducer.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_project_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/project_actions */ "./frontend/actions/project_actions.js");
+
+
+var projectsReducer = function projectsReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(oldState);
+  var newState = Object.assign({}, oldState);
+
+  switch (action.type) {
+    case _actions_project_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PROJECTS"]:
+      return action.projects;
+
+    case _actions_project_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PROJECT"]:
+      newState[action.project.id] = action.project;
+      return newState;
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (projectsReducer);
 
 /***/ }),
 
@@ -1443,14 +1631,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _session_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./session_reducer */ "./frontend/reducers/session_reducer.js");
 /* harmony import */ var _entities_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./entities_reducer */ "./frontend/reducers/entities_reducer.js");
+/* harmony import */ var _errors_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./errors_reducer */ "./frontend/reducers/errors_reducer.js");
+
 
 
 
 var RootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   entities: _entities_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
-  session: _session_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  session: _session_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  errors: _errors_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (RootReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/session_errors_reducer.js":
+/*!*****************************************************!*\
+  !*** ./frontend/reducers/session_errors_reducer.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
+
+
+var sessionErrorsReducer = function sessionErrorsReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(oldState);
+
+  switch (action.type) {
+    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SESSION_ERRORS"]:
+      return action.errors;
+
+    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
+      return [];
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (sessionErrorsReducer);
 
 /***/ }),
 
@@ -1551,6 +1775,33 @@ var configureStore = function configureStore() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
+
+/***/ }),
+
+/***/ "./frontend/util/project_api_util.js":
+/*!*******************************************!*\
+  !*** ./frontend/util/project_api_util.js ***!
+  \*******************************************/
+/*! exports provided: fetchProjects, fetchProject */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProjects", function() { return fetchProjects; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchProject", function() { return fetchProject; });
+var fetchProjects = function fetchProjects() {
+  // debugger
+  return $.ajax({
+    url: 'api/projects',
+    method: "GET"
+  });
+};
+var fetchProject = function fetchProject(projectId) {
+  return $.ajax({
+    url: "api/projects/".concat(projectId),
+    method: "GET"
+  });
+};
 
 /***/ }),
 

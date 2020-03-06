@@ -6,17 +6,19 @@ class Bar extends React.Component {
   render() {
     return (
       <div id="bar_container">
-        <div id="bar">
-          <Link to={"/arts"}>
-            <h5>Arts</h5>
-          </Link>
-          <h5>Comics/Illistrations</h5>
-          <h5>Design/Tech</h5>
-          <h5>Film</h5>
-          <h5>Food/Craft</h5>
-          <h5>Games</h5>
-          <h5>Music</h5>
-          <h5>Publishing</h5>
+        <div id="bar-middle">
+          <div id="bar">
+            <Link to={"/arts"}>
+              <h5 id="bar-link">Arts</h5>
+            </Link>
+            <h5 id="bar-link">Comics/Illistrations</h5>
+            <h5 id="bar-link">Design/Tech</h5>
+            <h5 id="bar-link">Film</h5>
+            <h5 id="bar-link">Food/Craft</h5>
+            <h5 id="bar-link">Games</h5>
+            <h5 id="bar-link">Music</h5>
+            <h5 id="bar-link">Publishing</h5>
+          </div>
         </div>
       </div>
     )

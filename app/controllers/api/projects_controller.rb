@@ -2,7 +2,9 @@ class Api::ProjectsController < ApplicationController
 
   def index
     @projects = Project.all 
-    render json: "api/projects/index"
+    # debugger
+    # render json: "api/projects/index"
+    render :index
   end
 
   def show

@@ -10,17 +10,35 @@ User.destroy_all
 Project.destroy_all
 
 #users
-demo_human = User.create([{name: 'Demo Human', email: 'demohuman@yahoo.com', password: 'password' }])
-user_1 = User.create([{name: 'Kyle', email: 'KingKyle@yahoo.com', password: 'password' }])
-user_2 = User.create([{name: 'Ayana', email: 'Ayana@yahoo.com', password: 'password' }])
+demo_human = User.create({name: 'Demo Human', email: 'demohuman@yahoo.com', password: 'password' })
+user_1 = User.create({name: 'Kyle', email: 'KingKyle@yahoo.com', password: 'password' })
+user_2 = User.create({name: 'Ayana', email: 'Ayana@baby.com', password: 'password' })
 
 #project
-project_1 = Project.create([{
+project_1 = Project.create({
   user_id: user_1.id,
   title: "Cool Marbel Shit",
   body: "This is a really cool project that uses marbels to create unlimited energy",
   category: "Art",
-  date: "",
-  current_total: 0,
-  target: 0
-}])
+  current_total: 10000,
+  target: 100000
+})
+
+project_2 = Project.create({
+  user_id: user_2.id,
+  title: "Weird Ring Bull Shit",
+  body: "Poo poo platers, which uses marbels to create unlimited aids",
+  category: "Art",
+  current_total: 27400,
+  target: 50000
+})
+
+project_3 = Project.create({
+  user_id: user_2.id,
+  title: "Steph Curry Clonning",
+  body: "Tank for Wiseman",
+  category: "Art",
+  current_total: 47000,
+  target: 44000
+})
+

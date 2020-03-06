@@ -58,6 +58,16 @@ table {
     border-spacing: 0;
 }
 
+/* a { color: inherit; text-decoration: none; }  */
+
+  a {
+    all: unset;
+  }
+
+
+
+
+
 
 #hidden {
   display: none;
@@ -72,6 +82,8 @@ table {
    padding: 10px;
    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
    color: grey;
+
+
  }
 
  #nav_left {
@@ -91,58 +103,79 @@ table {
 
 #bar_container {
   text-align: center;
+  border-bottom: 1px solid lightgrey;
+}
+
+#bar-middle {
+  display: inline-block;
 }
 
 #bar {
   display: flex;
-  justify-content: space-evenly;
-  border-bottom: 1px solid lightgrey;
+  /* justify-content: space-between; */
   padding-top: 15px;
   padding-bottom: 15px;
-
 }
 
-#bar > h5:hover {
+#bar-link {
+  margin-left: 25px;
+  margin-right: 25px;
+  color: grey;
+}
+
+#bar-link:hover {
   text-decoration: underline;
   color: green;
+  cursor: pointer;
 }
+
 
 
 #featured {
   text-align: left;
   padding-bottom: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: grey;
 }
 
 .featured_pic {
   margin-top: 20px;
-  width: 650px;
+  width: 90%;
   border-bottom:  solid 20px green;
+  text-align: left;
 }
 
 .featured_pic:hover > #featured {
   display: block;
 }
 
-#index_body {
+#index-body {
   margin-top: 50px;
   display: flex;
+  align-items: stretch;
   flex-direction: row;
-  justify-content: space-evenly;
   min-height: 500px;
 }
 
 #focus {
-  
+  width: 55%;
+}
+
+#focus-item {
+  text-align: left;
 }
 
 #focus-container {
   text-align: center;
-  margin-left: 50px;
+  margin-left: 10%;
 }
 
 #focus-body {
   display: inline-block;
+  text-align: left;
+  width: 75%;
+  position: relative;
 }
 
 #side {
@@ -151,17 +184,51 @@ table {
   text-align: center;
 }
 
-#side_posts {
-  display: inline-block;
+#side-body {
+  width: 50%
 }
 
-#side_posts > img {
-  min-width: 200px;
-  min-height: 100px;
-  max-width: 400px;
-  max-height: 200px;
-  
+#side-item {
+  display: flex;
+  width: 90%;
+  height: 18%;
+  padding-bottom: 5%;
 }
+
+#side_posts {
+  display: inline-block;
+  padding-top: 20px;
+  height: 300px;
+  text-align: left;
+}
+
+#side-img {
+  height: 100%;
+  width: 35%;
+}
+
+#side-text {
+  padding-left: 20px;
+}
+
+#side-text > p {
+  margin-bottom: 5%;
+}
+
+#side-target {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+
+#recomended-text {
+  text-align: left;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: grey;
+}
+
 
 #subscribe_container {
   text-align: center;
@@ -310,5 +377,6 @@ table {
   0%   {left: 110%; top: 110%;}
   100% {left : 5%; top: 15%;}
 }
+
 
 

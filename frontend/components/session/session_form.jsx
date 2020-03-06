@@ -66,6 +66,7 @@ class SessionForm extends React.Component {
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <h1 id="form-type-display" >{this.props.display}</h1>
+            <div>{this.props.errors}</div>
             <div className="login-form">
               <br id={formId}/>
               <input id={formId} type="text" value={this.state.name} placeholder="Name" onChange={this.update('name')} />

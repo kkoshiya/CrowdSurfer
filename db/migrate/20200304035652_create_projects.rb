@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.string :title
       t.string :body
-      t.string :catagory
+      t.string :category
       t.date :date
       t.integer :current_total
       t.integer :target

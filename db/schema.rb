@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_03_04_035652) do
     t.integer "user_id"
     t.string "title"
     t.string "body"
-    t.string "catagory"
+    t.string "category"
     t.date "date"
     t.integer "current_total"
     t.integer "target"
