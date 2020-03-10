@@ -1063,7 +1063,7 @@ var Nav = /*#__PURE__*/function (_React$Component) {
         to: '/'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "logo",
-        src: window.c11
+        src: window.logo
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "nav_right"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
