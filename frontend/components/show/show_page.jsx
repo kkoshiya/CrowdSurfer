@@ -10,7 +10,10 @@ class ShowPage extends React.Component {
   componentDidMount() {
     // this.props.fetchProjects();
     this.props.fetchProject(this.props.project.id);
+  }
 
+  componentDidUpdate() {
+    this.props.fetchProject(this.props.project.id);
   }
 
   render() {

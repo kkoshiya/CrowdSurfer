@@ -1063,7 +1063,7 @@ var Nav = /*#__PURE__*/function (_React$Component) {
         to: '/'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "logo",
-        src: "assets/logo.png"
+        src: window.c11
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "nav_right"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -1653,6 +1653,11 @@ var ShowPage = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       // this.props.fetchProjects();
+      this.props.fetchProject(this.props.project.id);
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
       this.props.fetchProject(this.props.project.id);
     }
   }, {

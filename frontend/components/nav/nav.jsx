@@ -14,7 +14,7 @@ class Nav extends React.Component {
         </div>
         <div>
           <Link to={'/'}>
-            <img className="logo" src="assets/logo.png"/>
+            <img className="logo" src={window.c11} />
           </Link>
         </div>
         <div id="nav_right">
