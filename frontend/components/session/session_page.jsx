@@ -7,7 +7,7 @@ class SessionPage extends React.Component {
     return (
       <div id="log-in-page">
         <img id="background-img" src="assets/background.png" />
-        <img id="rocket" src="assets/rocket.png"/>
+        <img id="rocket" src={window.rocket}/>
         <SessionFormContainer />
       </div>
     )

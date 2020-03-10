@@ -1442,7 +1442,7 @@ var SessionPage = /*#__PURE__*/function (_React$Component) {
         src: "assets/background.png"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         id: "rocket",
-        src: "assets/rocket.png"
+        src: window.rocket
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_session_form_container__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
@@ -1534,7 +1534,7 @@ var SessionPage = /*#__PURE__*/function (_React$Component) {
         src: "assets/background.png"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         id: "rocket",
-        src: "assets/rocket.png"
+        src: window.rocket
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_signup_container__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
