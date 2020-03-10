@@ -19,7 +19,11 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+    if (this.props.display === 'Sign Up') {
+      this.props.processForm(this.state);
+    } else {
+      this.props.processForm(this.state).fail( () => this.props.openModal('login'))
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -49,16 +53,22 @@ class SessionForm extends React.Component {
     let show;
     let demo;
     let hideLog;
+    let log_in;
+    let error;
     if (this.props.display === 'Sign Up') {
       formId = "form_input";
       show = "";
       demo = "hidden";
       hideLog = "hidden";
+      log_in = "hidden";
+      error = "error-box"
     } else { //this means that it is log in 
       formId = "hidden";
       show = "hidden";
       demo = "demo";
       hideLog = ""
+      log_in = "log-in";
+      error = "hidden"
     }
     return (
       <div className="session_form">
@@ -66,7 +76,9 @@ class SessionForm extends React.Component {
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <h1 id="form-type-display" >{this.props.display}</h1>
-            <div>{this.props.errors}</div>
+            <div className={error}>
+              <div id={error}>{this.props.errors}</div>
+            </div>
             <div className="login-form">
               <br id={formId}/>
               <input id={formId} type="text" value={this.state.name} placeholder="Name" onChange={this.update('name')} />
@@ -77,10 +89,20 @@ class SessionForm extends React.Component {
               <p id="forgot-password">Forgot Password?</p>
               <br />
               <button id="submit_button" type="submit">Submit</button>
-              <br id="hideLog"/>
-              <p id="hideLog">or</p>
-              <br id="hideLog"/>
+              <br className={hideLog}/>
+              <p className={hideLog}>or</p>
+              <br className={hideLog}/>
               <button id={demo} onClick={this.demoUser}>Demo User</button>
+              <div className="container">
+                <div className="container-2">
+                  <div className={log_in}>
+                      <p>New to Kickstarter?</p>
+                      <p>
+                        <Link to="/signup">Sign Up</Link>
+                      </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
         </div>

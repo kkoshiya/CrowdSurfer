@@ -82,14 +82,23 @@ table {
    padding: 10px;
    font-family: "Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
    color: grey;
-
-
  }
+
+
 
  #nav_left {
    display: flex;
    margin-left: 20px;
  }
+
+ #nav_left:hover {
+  cursor: pointer;;
+ }
+
+ #nav_right:hover {
+  cursor: pointer;;
+ }
+
 
  #nav_right {
    margin-right: 20px;
@@ -99,6 +108,10 @@ table {
 
 .logo {
   height: 50px;
+}
+
+.logo:hover {
+  cursor: pointer;
 }
 
 #bar_container {
@@ -124,7 +137,7 @@ table {
 }
 
 #bar-link:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: green;
   cursor: pointer;
 }
@@ -203,7 +216,7 @@ table {
 }
 
 #side-img {
-  height: 100%;
+  height: 100px;
   width: 35%;
 }
 
@@ -212,7 +225,11 @@ table {
 }
 
 #side-text > p {
-  margin-bottom: 5%;
+  margin-bottom: 4%;
+}
+
+#side-title {
+  margin-bottom: 4%;
 }
 
 #side-target {
@@ -321,6 +338,7 @@ table {
   background-color: lightgreen;
   height: 30px;
   width: 250px;
+  padding-bottom: 5px;
 }
 
 #demo:hover {
@@ -340,6 +358,9 @@ table {
 #forgot-password {
   color: blue;
   font-size: 12px;
+  display: flex;
+  padding-left: 50px;
+  
 }
 
 #forgot-password:hover {
@@ -378,5 +399,109 @@ table {
   100% {left : 5%; top: 15%;}
 }
 
+.cat-list-line {
+  display: inline-block;
+  width: 40%;
+  height: 2px;
+  background-color: #034752;
+  /* margin-top: 4px; */
+  position: relative;
+  top: -13px;
+  opacity: 0%;
+  -webkit-transition: all 0.3s ease-in-out;
+}
 
+.cat-item-and-line:hover .cat-list-line {
+  opacity: 100%;
+  top: 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+}
 
+#line-container {
+  text-align: center;
+}
+
+#show-header {
+  text-align: center;
+  height: 80px;
+
+}
+
+#show-title {
+  display: inline-block;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+#show-description {
+  display: inline-block
+}
+
+.hidden {
+  display: none;
+}
+
+.log-in {
+  padding-top: 7%;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.log-in > :first-child {
+  padding-right: 5px;
+}
+
+.log-in > :last-child {
+  color: blue;
+}
+
+.log-in > :last-child:hover {
+  cursor: pointer;
+}
+
+.error-box {
+  background-color: red;
+  color: white;
+  width: 75%;
+  display: inline-block;
+}
+
+.container {
+  padding-top: 7px;
+  text-align: center;
+}
+
+.container-2 {
+  display: inline-block; 
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px black;
+  background-color: white;
+  color: red;
+  height: 100px;
+  width: 300px;
+  border-top: 7px solid red;
+  text-align: center;
+}
+
+.modal-text {
+  padding: 30px;
+  display: inline-block;
+}

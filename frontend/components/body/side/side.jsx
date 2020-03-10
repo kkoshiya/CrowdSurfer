@@ -19,7 +19,7 @@ class Side extends React.Component {
           <ul id="side_posts">
             {
               this.props.projects.map(project =>
-                <div><SideItem project={project}/></div>)
+                <div key={project.id}><SideItem project={project}/></div>)
             }
           </ul>
         </div>

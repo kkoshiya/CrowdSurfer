@@ -4,7 +4,8 @@ import SessionForm from './session_form';
 
 const mSTP = (state) => ({
    formType: signup,
-   display: 'Sign Up'
+   display: 'Sign Up',
+   errors: state.errors.session
 });
 
 const mDTP = (dispatch, { location }) => ({

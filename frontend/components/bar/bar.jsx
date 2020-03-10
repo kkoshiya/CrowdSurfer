@@ -8,9 +8,15 @@ class Bar extends React.Component {
       <div id="bar_container">
         <div id="bar-middle">
           <div id="bar">
-            <Link to={"/arts"}>
-              <h5 id="bar-link">Arts</h5>
-            </Link>
+            <div className="cat-item-and-line">
+              <Link to={"/arts"}>
+                <h5 id="bar-link">Arts</h5>
+                <div id="line-container">
+                  <div className="cat-list-line"></div>
+                </div>
+              </Link>
+            </div>
+
             <h5 id="bar-link">Comics/Illistrations</h5>
             <h5 id="bar-link">Design/Tech</h5>
             <h5 id="bar-link">Film</h5>
