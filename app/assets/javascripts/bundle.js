@@ -1439,7 +1439,7 @@ var SessionPage = /*#__PURE__*/function (_React$Component) {
         id: "log-in-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         id: "background-img",
-        src: "assets/background.png"
+        src: window.background
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         id: "rocket",
         src: window.rocket
@@ -1531,7 +1531,7 @@ var SessionPage = /*#__PURE__*/function (_React$Component) {
         id: "log-in-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         id: "background-img",
-        src: "assets/background.png"
+        src: window.background
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         id: "rocket",
         src: window.rocket
