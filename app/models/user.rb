@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :name, :password_digest, :session_token, presence: true
   validates :name, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
+  validates :email, uniqueness: true
 
   has_many :projects,
   foreign_key: :user_id,

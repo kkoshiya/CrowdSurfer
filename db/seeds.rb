@@ -14,15 +14,16 @@ demo_human = User.create({name: 'Demo Human', email: 'demohuman@yahoo.com', pass
 user_1 = User.create({name: 'Kyle', email: 'KingKyle@yahoo.com', password: 'password' })
 user_2 = User.create({name: 'Ayana', email: 'Ayana@baby.com', password: 'password' })
 
-#project
+#projects
 project_1 = Project.create({
   user_id: user_1.id,
   title: "Cool Marbel Shit",
   body: "This is a really cool project that uses marbels to create unlimited energy",
-  category: "Art",
+  catagory: "Art",
   current_total: 10000,
   target: 100000
 })
+
 
 project_2 = Project.create({
   user_id: user_2.id,

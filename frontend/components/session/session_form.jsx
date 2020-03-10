@@ -32,6 +32,10 @@ class SessionForm extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.props.deleteErrors()
+  }
+
   demoUser(){
     this.state = {
       email: "demohuman@yahoo.com",
@@ -54,6 +58,7 @@ class SessionForm extends React.Component {
     let demo;
     let hideLog;
     let log_in;
+    let sign_up;
     let error;
     if (this.props.display === 'Sign Up') {
       formId = "form_input";
@@ -61,6 +66,7 @@ class SessionForm extends React.Component {
       demo = "hidden";
       hideLog = "hidden";
       log_in = "hidden";
+      sign_up = "sign-up"
       error = "error-box"
     } else { //this means that it is log in 
       formId = "hidden";
@@ -68,8 +74,10 @@ class SessionForm extends React.Component {
       demo = "demo";
       hideLog = ""
       log_in = "log-in";
+      sign_up = "hidden"
       error = "hidden"
     }
+    let errors = this.props.errors
     return (
       <div className="session_form">
         {/* <img class="form_background" src="assets/background.png" /> */}
@@ -77,7 +85,13 @@ class SessionForm extends React.Component {
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <h1 id="form-type-display" >{this.props.display}</h1>
             <div className={error}>
-              <div id={error}>{this.props.errors}</div>
+              <div id={error}>
+                {
+                  errors.map(error => {
+                    return (<div>{error}</div>)
+                  })
+                }
+              </div>
             </div>
             <div className="login-form">
               <br id={formId}/>
@@ -93,16 +107,22 @@ class SessionForm extends React.Component {
               <p className={hideLog}>or</p>
               <br className={hideLog}/>
               <button id={demo} onClick={this.demoUser}>Demo User</button>
+              
               <div className="container">
                 <div className="container-2">
                   <div className={log_in}>
                       <p>New to Kickstarter?</p>
-                      <p>
-                        <Link to="/signup">Sign Up</Link>
-                      </p>
-                  </div>
+                      <p><Link to="/signup">Sign Up</Link></p>                  </div>
                 </div>
               </div>
+              <div className="container">
+                <div className="container-2">
+                  <div className={sign_up}>
+                      <p>Already Have an Account?</p>
+                      <p><Link to="/login">Log In</Link></p>                  </div>
+                </div>
+              </div>
+
             </div>
           </form>
         </div>

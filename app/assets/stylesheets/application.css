@@ -366,6 +366,7 @@ table {
 #forgot-password:hover {
   color: black;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 #subscribe-1 {
@@ -455,11 +456,33 @@ table {
 
 .log-in > :last-child {
   color: blue;
+  text-decoration: underline;
 }
 
 .log-in > :last-child:hover {
   cursor: pointer;
 }
+.sign-up {
+  /* padding-top: -7%; */
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.sign-up > :first-child {
+  padding-right: 5px;
+}
+
+.sign-up > :last-child {
+  color: blue;
+  text-decoration: underline;
+}
+
+.sign-up > :last-child:hover {
+  cursor: pointer;
+}
+
+
 
 .error-box {
   background-color: red;

@@ -11,17 +11,20 @@ import SignUpPageContainer from './session/sign_up_pagecontainer'
 import ShowPageContainer from './show/show_page_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal'
+import { Switch } from 'react-router-dom'
 
 
 const App = () => (
   <div>
     <Modal />
     <Nav_container />
-    <Route exact path="/arts" component={Splat} />
-    <AuthRoute exact path="/login" component={SessionPageContainer} /> 
-    <AuthRoute exact path="/signup" component={SignUpPageContainer} />
-    <Route exact path="/" component={Splat} />   
-    <Route exact path="/projects/:projectId" component={ShowPageContainer} /> 
+    <Switch> 
+      <Route exact path="/arts" component={Splat} />
+      <AuthRoute exact path="/login" component={SessionPageContainer} /> 
+      <AuthRoute exact path="/signup" component={SignUpPageContainer} />
+      <Route exact path="/projects/:projectId" component={ShowPageContainer} /> 
+      <Route path="/" component={Splat} />   
+    </Switch>
   </div>
 );
 
