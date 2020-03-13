@@ -121,6 +121,7 @@ table {
 
 #bar-middle {
   display: inline-block;
+  text-align: center;
 }
 
 #bar {
@@ -128,6 +129,7 @@ table {
   /* justify-content: space-between; */
   padding-top: 15px;
   padding-bottom: 15px;
+  text-align: center;
 }
 
 #bar-link {
@@ -137,7 +139,7 @@ table {
 }
 
 #bar-link:hover {
-  /* text-decoration: underline; */
+  text-decoration: underline;
   color: green;
   cursor: pointer;
 }
@@ -154,17 +156,33 @@ table {
 
 .featured_pic {
   margin-top: 20px;
-  width: 90%;
+  margin-bottom: 2%;
+  max-width: 90%;
+  min-width: 90%;
+  min-height: 70%;
+  max-height: 100%;
   border-bottom:  solid 20px green;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: left;
+  border: 3px solid #009E74;
+
 }
 
 .featured_pic:hover > #featured {
   display: block;
 }
 
+.focus-description {
+  padding-top: .5%;
+  padding-bottom: .5%;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-weight: bold;
+  text-align: left;
+}
+
 #index-body {
-  margin-top: 50px;
+  margin-top: 3.5%;
+  margin-bottom: 50px;
   display: flex;
   align-items: stretch;
   flex-direction: row;
@@ -182,6 +200,7 @@ table {
 #focus-container {
   text-align: center;
   margin-left: 10%;
+  height: 60%;
 }
 
 #focus-body {
@@ -194,7 +213,7 @@ table {
 #side {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
 }
 
 #side-body {
@@ -400,32 +419,11 @@ table {
   100% {left : 5%; top: 15%;}
 }
 
-.cat-list-line {
-  display: inline-block;
-  width: 40%;
-  height: 2px;
-  background-color: #034752;
-  /* margin-top: 4px; */
-  position: relative;
-  top: -13px;
-  opacity: 0%;
-  -webkit-transition: all 0.3s ease-in-out;
-}
-
-.cat-item-and-line:hover .cat-list-line {
-  opacity: 100%;
-  top: 0px;
-  -webkit-transition: all 0.3s ease-in-out;
-}
-
-#line-container {
-  text-align: center;
-}
 
 #show-header {
   text-align: center;
   height: 80px;
-
+  margin-bottom: 35px;
 }
 
 #show-title {
@@ -436,7 +434,8 @@ table {
 }
 
 #show-description {
-  display: inline-block
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .hidden {
@@ -482,8 +481,6 @@ table {
   cursor: pointer;
 }
 
-
-
 .error-box {
   background-color: red;
   color: white;
@@ -527,4 +524,123 @@ table {
 .modal-text {
   padding: 30px;
   display: inline-block;
+}
+
+#show-header {
+
+}
+.show-center {
+  display: flex;
+  padding-top: 2%;
+}
+
+.main-show-img {
+  min-height: 450px;
+  max-height: 450px;
+  width: 58%;
+  margin-left: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.show-side-container {
+  margin-left: 15%;
+  width: 100%;
+}
+
+.show-side-target :first-child{
+  text-decoration: 900;
+  font-size: 30px;
+  color: #009E74;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.show-side-target :last-child{
+  font-size: 18px;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.show-side-target {
+  padding-bottom: 4%;
+  padding-top: 4%;
+  
+}
+
+#side-show-funding {
+  width: 42%;
+}
+
+.back-button {
+  background-color: #009E74;
+  width: 65%;
+  height: 60px;
+  color: white;
+  font-size: 16px;
+}
+
+.show-side-backers-days :first-child{
+  text-decoration: 900;
+  font-size: 30px;
+  color:grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.show-side-backers-days :last-child{
+  font-size: 18px;
+  color:grey;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 3%;
+}
+
+progress:not([value]) {
+   /* Styling here */
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 65%;
+  height: 10px;
+  color: #009E74;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: lightgrey;
+  border-radius: 2px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; */
+}
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #009E74, #009E74);
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+.show-side-bottom {
+  padding-top: 3%;
+  display: flex;
+  align-items: center;
+}
+
+.remind-me-button {
+  width: 30%;
+  height: 35px;
+  background-color: whitesmoke;
+
+}
+
+.facebook-logo-small {
+  height: 20px;
+  width: 20px;
+  padding-left: 30px;
+}
+
+.show-side-bottom-right {
+  align-items: center;
 }

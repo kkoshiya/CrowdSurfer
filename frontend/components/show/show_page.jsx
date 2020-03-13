@@ -1,4 +1,5 @@
 import React from 'react';
+import Side from './project_side'
 
 
 class ShowPage extends React.Component {
@@ -8,28 +9,28 @@ class ShowPage extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.fetchProjects();
-    this.props.fetchProject(this.props.project.id);
-  }
-
-  componentDidUpdate() {
-    this.props.fetchProject(this.props.project.id);
+    this.props.fetchProject(this.props.match.params.projectId);
   }
 
   render() {
     if (!this.props.project) return null;
       return (
         <div>
+
           <div id="show-header">
-            <h1 id="show-title">This is the show page for {this.props.project.title}</h1>
+            <h1 id="show-title">{this.props.project.title}</h1>
             <br/>
             <div id="show-description-container">
-              <h3 id="show-description" >"Project Description" (Will add later)</h3>
+              <h3 id="show-description">{this.props.project.description}</h3>
             </div>
           </div>
-          <p>This the the body: {this.props.project.body}</p>
-          <h1>Number of backers "Hold for now"</h1>
-          <h1>{this.props.project.total}</h1>
+
+          <div className="show-center">
+            <img className="main-show-img" src={this.props.project.image} />
+            <div id="side-show-funding">
+              <Side project={this.props.project} update={this.props.update} currentUser={this.props.currentUser} />
+            </div>
+          </div>
 
         </div>
       )

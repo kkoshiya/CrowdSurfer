@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import IndexBody from './index_body';
 
-const mSTP = (state) => ({
-
+const mSTP = (state, ownProps) => ({
+  
 })
 
 const mDTP = (dispatch) => ({

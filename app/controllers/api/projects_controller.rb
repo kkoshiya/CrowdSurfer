@@ -9,7 +9,17 @@ class Api::ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    render json: "api/projects/show"
+    render :show
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    if @project 
+      @project.update(project_params)
+      render :show
+    else 
+      render json: ["This is not a user"], status: 422
+    end
   end
 
   def create
@@ -28,6 +38,7 @@ class Api::ProjectsController < ApplicationController
     params.require(:project).permit(
       :title,
       :user_id,
+      :description,
       :body,
       :category,
       :date,

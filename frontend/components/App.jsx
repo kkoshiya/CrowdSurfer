@@ -19,7 +19,8 @@ const App = () => (
     <Modal />
     <Nav_container />
     <Switch> 
-      <Route exact path="/arts" component={Splat} />
+      <Route exact path="/art" component={Splat} />
+      <Route exact path="/technology" component={Splat} />
       <AuthRoute exact path="/login" component={SessionPageContainer} /> 
       <AuthRoute exact path="/signup" component={SignUpPageContainer} />
       <Route exact path="/projects/:projectId" component={ShowPageContainer} /> 

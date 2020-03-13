@@ -12,3 +12,11 @@ export const fetchProject = (projectId) => {
   method: "GET"
   })
 }
+
+export const updateProject = project => {
+  return $.ajax({
+    url: `api/projects/${project.id}`,
+    method: "PATCH",
+    data: { project }
+  })
+}

@@ -12,13 +12,19 @@ class Side extends React.Component {
 
 
   render() {
+    let projects = this.props.projects;
+    if (this.props.location.pathname !== '/') {
+      projects = this.props.projects.filter(project => project.category === this.props.location.pathname.slice(1))
+    }
+    const sample = { title: '' };
+    let three_show = projects.slice(1,4) || sample;
     return (
       <div id="side">
         <h1 id="recomended-text">RECOMENDED</h1>
         <div>
           <ul id="side_posts">
             {
-              this.props.projects.map(project =>
+              three_show.map(project =>
                 <div key={project.id}><SideItem project={project}/></div>)
             }
           </ul>
