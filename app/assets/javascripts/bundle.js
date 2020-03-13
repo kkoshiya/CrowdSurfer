@@ -486,6 +486,27 @@ var mDTP = function mDTP(dispatch) {
 
 /***/ }),
 
+/***/ "./frontend/components/body/bottom_body.jsx":
+/*!**************************************************!*\
+  !*** ./frontend/components/body/bottom_body.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Bottom = function Bottom(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Bottom);
+
+/***/ }),
+
 /***/ "./frontend/components/body/focus/focus.jsx":
 /*!**************************************************!*\
   !*** ./frontend/components/body/focus/focus.jsx ***!
@@ -649,6 +670,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _focus_focus_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./focus/focus_container */ "./frontend/components/body/focus/focus_container.js");
 /* harmony import */ var _side_side_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./side/side_container */ "./frontend/components/body/side/side_container.js");
+/* harmony import */ var _bottom_body__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bottom_body */ "./frontend/components/body/bottom_body.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -666,6 +688,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -1797,6 +1820,7 @@ var Side = function Side(props) {
   var user = props.currentUser;
   var project = props.project;
   var change = 145;
+  var backers = 53;
 
   var back = function back(update) {
     project.current_total += change;
@@ -1813,14 +1837,14 @@ var Side = function Side(props) {
     className: "show-side-target"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "$", props.project.current_total.toLocaleString()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "pledged of $", props.project.target.toLocaleString(), " goal")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "show-side-backers-days"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "53"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "backers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, backers), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "backers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "show-side-backers-days"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "40"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "days to go")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "40"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "days to go")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "back-button",
     onClick: function onClick() {
       return back(props.update);
     }
-  }, "Back this project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Back this project")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "show-side-bottom"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "remind-me-button"
@@ -1983,6 +2007,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bar_bar_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bar/bar_container */ "./frontend/components/bar/bar_container.js");
 /* harmony import */ var _body_index_body_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./body/index_body_container */ "./frontend/components/body/index_body_container.js");
 /* harmony import */ var _body_subscribe_subscribe_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./body/subscribe/subscribe_container */ "./frontend/components/body/subscribe/subscribe_container.js");
+/* harmony import */ var _body_bottom_body__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./body/bottom_body */ "./frontend/components/body/bottom_body.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2000,6 +2025,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 

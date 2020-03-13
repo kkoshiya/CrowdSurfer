@@ -91,6 +91,18 @@ project_6 = Project.create({
 })
 
 project_7 = Project.create({
+  user_id: user_2.id,
+  title: "America's First Banjo Replica",
+  body: "The greatest band in the history of bands is about to give us the secret to life",
+  description: "The path to eternal youth is the eye of yan",
+  category: "music",
+  current_total: 470,
+  target: 5200,
+  image: 'banjo.png'
+  # date: 2020-06-01
+})
+
+project_8 = Project.create({
   user_id: user_4.id,
   title: "America Mystery Box",
   body: "The greatest band in the history of bands is about to give us the secret to life",
@@ -101,6 +113,19 @@ project_7 = Project.create({
   image: 'eye.gif'
   # date: 2020-06-01
 })
+
+project_9 = Project.create({
+  user_id: user_2.id,
+  title: "Corona Virus Cure",
+  body: "Tired of being so sick that you wish you were dead?",
+  description: "The path to eternal youth is the eye of yan",
+  category: "technology",
+  current_total: 17030,
+  target: 55000,
+  image: 'corona.png'
+  # date: 2020-06-01
+})
+
 
 
 

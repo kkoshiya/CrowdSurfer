@@ -4,6 +4,7 @@ const Side = (props) => {
     let user = props.currentUser;
     let project = props.project;
     let change = 145;
+    let backers = 53;
 
     const back = (update) => {
       project.current_total += change;
@@ -22,7 +23,7 @@ const Side = (props) => {
     </div>
       
     <div className="show-side-backers-days">
-      <h1>53</h1>
+      <h1>{backers}</h1>
       <h1>backers</h1>
     </div>
 
@@ -31,7 +32,9 @@ const Side = (props) => {
       <h1>days to go</h1>
     </div>
     
-    <button className="back-button" onClick={() => back(props.update)}>Back this project</button>
+    <div>
+      <button className="back-button" onClick={() => back(props.update)}>Back this project</button>
+    </div>
     
     <div className="show-side-bottom">
       <button className="remind-me-button">Remind me</button>
