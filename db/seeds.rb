@@ -19,8 +19,8 @@ user_4 = User.create({name: 'Donald Trump', email: 'lucklovescrypto22@usFED.com'
 #projects
 project_1 = Project.create({
   user_id: user_1.id,
-  title: "Cool Marbel Shit",
-  description: "All hail the greys and our neet overlords",
+  title: "Cool Marbel Invention",
+  description: "All hail the greys and our neet overlords who have blessed us with 2030 tech",
   body: "This is a really cool project that uses marbels to create unlimited energy",
   category: "art",
   current_total: 10000,
@@ -32,9 +32,9 @@ project_1 = Project.create({
 
 project_2 = Project.create({
   user_id: user_2.id,
-  title: "Weird Ring Bull Shit",
+  title: "Smart Ring to Rule them All",
   description: "911 was an inside job, let's be real here",
-  body: "Poo poo platers, which uses marbels to create unlimited aids",
+  body: "Open doors and unlock other things, which uses marbels to create unlimited aids",
   category: "art",
   current_total: 27400,
   target: 50000,
@@ -44,13 +44,13 @@ project_2 = Project.create({
 
 project_3 = Project.create({
   user_id: user_2.id,
-  title: "Steph Curry Clonning",
+  title: "Steph Curry Clonning With Super-Computer",
   body: "Tank for Wiseman",
   description: "Clone the Goat so we can win another ring baby",
   category: "art",
   current_total: 47000,
   target: 44000,
-  image: 'ring.gif'
+  image: 'computer.png'
   # date: 2020-06-01
 })
 
