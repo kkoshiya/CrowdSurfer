@@ -45,8 +45,15 @@ class Bar extends React.Component {
                 </div>
               </Link>
             </div>
+            <div className="cat-item-and-line">
+              <Link to={"/publishing"}>
+                <h5 id="bar-link">Publishing</h5>
+                <div id="line-container">
+                  <div className="cat-list-line"></div>
+                </div>
+              </Link>
+            </div>
 
-            <h5 id="bar-link">Publishing</h5>
           </div>
         </div>
       </div>

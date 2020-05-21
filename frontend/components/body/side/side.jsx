@@ -1,5 +1,6 @@
 import React from 'react';
-import SideItem from './side_item'
+import SideItem from './side_item';
+import { Link } from "react-router-dom";
 
 class Side extends React.Component {
   constructor(props) {

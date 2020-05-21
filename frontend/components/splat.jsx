@@ -16,6 +16,7 @@ class Splat extends React.Component {
         <BarContainer />
         <IndexBody_container match={this.props.match} />
         <Subscribe />
+        <Bottom />
       </div>
     )
   }

@@ -126,6 +126,18 @@ project_9 = Project.create({
   # date: 2020-06-01
 })
 
+project_10 = Project.create({
+  user_id: user_2.id,
+  title: "Corona Virus Cure",
+  body: "Tired of being so sick that you wish you were dead?",
+  description: "The path to eternal youth is the eye of yan",
+  category: "film",
+  current_total: 17030,
+  target: 55000,
+  image: 'corona.png'
+  # date: 2020-06-01
+})
+
 
 
 

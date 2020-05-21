@@ -3,7 +3,7 @@ import { Link} from "react-router-dom";
 
 const SideItem = (props) => (
     <div id="side-item">
-      <img id="side-img" src={props.project.image}/>
+       <img id="side-img" src={props.project.image}/>
       <div id="side-text">
         <Link to={`/projects/${props.project.id}`}>
           <p id="side-title">{props.project.title}</p>

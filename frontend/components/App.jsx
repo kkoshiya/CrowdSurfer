@@ -20,7 +20,12 @@ const App = () => (
     <Nav_container />
     <Switch> 
       <Route exact path="/art" component={Splat} />
+      <Route exact path="/comics" component={Splat} />
       <Route exact path="/technology" component={Splat} />
+      <Route exact path="/film" component={Splat} />
+      <Route exact path="/food" component={Splat} />
+      <Route exact path="/games" component={Splat} />
+      <Route exact path="/publishing" component={Splat} />
       <AuthRoute exact path="/login" component={SessionPageContainer} /> 
       <AuthRoute exact path="/signup" component={SignUpPageContainer} />
       <Route exact path="/projects/:projectId" component={ShowPageContainer} /> 
