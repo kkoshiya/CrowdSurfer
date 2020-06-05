@@ -32,7 +32,7 @@ class Bar extends React.Component {
               </Link>
             </div>
             
-            <h5 id="bar-link">Filmm</h5>
+            <h5 id="bar-link">Film</h5>
             <h5 id="bar-link">Food/Craft</h5>
             <h5 id="bar-link">Games</h5>
 
