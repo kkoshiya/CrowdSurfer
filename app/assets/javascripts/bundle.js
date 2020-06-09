@@ -462,7 +462,7 @@ var Bar = /*#__PURE__*/function (_React$Component) {
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cat-item-and-line"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/technology"
+        to: "/food"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         id: "bar-link"
       }, "Food/Craft"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -472,7 +472,7 @@ var Bar = /*#__PURE__*/function (_React$Component) {
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cat-item-and-line"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/technology"
+        to: "/games"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         id: "bar-link"
       }, "Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -482,7 +482,7 @@ var Bar = /*#__PURE__*/function (_React$Component) {
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cat-item-and-line"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/music"
+        to: "/film"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         id: "bar-link"
       }, "Film "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1288,9 +1288,13 @@ var Nav = /*#__PURE__*/function (_React$Component) {
         id: "nav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "nav_left"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: '/explore'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         id: "explore"
-      }, "Explore"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Start a Project")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "Explore")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: '/startproject'
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Start a Project"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: '/'
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "logo",

@@ -19,6 +19,8 @@ const App = () => (
     <Modal />
     <Nav_container />
     <Switch> 
+      {/* <Route path="explore" component={}/> */}
+      {/* <Route path="startproject" component={Splat}/> */}
       <Route exact path="/art" component={Splat} />
       <Route exact path="/comics" component={Splat} />
       <Route exact path="/technology" component={Splat} />

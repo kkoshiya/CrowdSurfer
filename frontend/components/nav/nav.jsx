@@ -9,8 +9,12 @@ class Nav extends React.Component {
     return (
       <div id="nav">
         <div id="nav_left">
-          <p id="explore">Explore</p>
-          <p>Start a Project</p>
+          <Link to={'/explore'}>
+            <p id="explore">Explore</p>
+          </Link>
+          <Link to={'/startproject'}>
+            <p>Start a Project</p>
+          </Link>
         </div>
         <div>
           <Link to={'/'}>

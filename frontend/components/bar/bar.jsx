@@ -40,7 +40,7 @@ class Bar extends React.Component {
             </div>
             
             <div className="cat-item-and-line">
-              <Link to={"/technology"}>
+              <Link to={"/food"}>
                 <h5 id="bar-link">Food/Craft</h5>
                 <div id="line-container">
                   <div className="cat-list-line"></div>
@@ -49,7 +49,7 @@ class Bar extends React.Component {
             </div>
 
             <div className="cat-item-and-line">
-              <Link to={"/technology"}>
+              <Link to={"/games"}>
                 <h5 id="bar-link">Games</h5>
                 <div id="line-container">
                   <div className="cat-list-line"></div>
@@ -58,7 +58,7 @@ class Bar extends React.Component {
             </div>
 
             <div className="cat-item-and-line">
-              <Link to={"/music"}>
+              <Link to={"/film"}>
                 <h5 id="bar-link">Film </h5>
                 <div id="line-container">
                   <div className="cat-list-line"></div>
