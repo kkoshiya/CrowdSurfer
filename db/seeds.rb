@@ -138,6 +138,17 @@ project_10 = Project.create({
   # date: 2020-06-01
 })
 
+project_11 = Project.create({
+  user_id: user_2.id,
+  title: "Spiderman Pokemon CrossOver",
+  body: "One of the freshest creations since the inception of the Sinister Six",
+  description: "Pokemon and Marvel what is not to like about this project",
+  category: "comics",
+  current_total: 10,
+  target: 1000,
+  image: 'corona.png'
+  # date: 2020-06-01
+})
 
 
 

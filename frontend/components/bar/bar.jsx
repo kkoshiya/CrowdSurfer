@@ -21,7 +21,14 @@ class Bar extends React.Component {
               </Link>
             </div>
 
-            <h5 id="bar-link">Comics/Illistrations</h5>
+            <div className="cat-item-and-line">
+              <Link to={"/comics"} >
+                <h5 id="bar-link">Comics/Illistrations</h5>
+                <div id="line-container">
+                  <div className="cat-list-line"></div>
+                </div>
+              </Link>
+            </div>
 
             <div className="cat-item-and-line">
               <Link to={"/technology"}>
@@ -32,10 +39,32 @@ class Bar extends React.Component {
               </Link>
             </div>
             
-            <h5 id="bar-link">Film </h5>
-            <h5 id="bar-link">Food/Craft</h5>
-            <h5 id="bar-link">Games</h5>
+            <div className="cat-item-and-line">
+              <Link to={"/technology"}>
+                <h5 id="bar-link">Food/Craft</h5>
+                <div id="line-container">
+                  <div className="cat-list-line"></div>
+                </div>
+              </Link>
+            </div>
 
+            <div className="cat-item-and-line">
+              <Link to={"/technology"}>
+                <h5 id="bar-link">Games</h5>
+                <div id="line-container">
+                  <div className="cat-list-line"></div>
+                </div>
+              </Link>
+            </div>
+
+            <div className="cat-item-and-line">
+              <Link to={"/music"}>
+                <h5 id="bar-link">Film </h5>
+                <div id="line-container">
+                  <div className="cat-list-line"></div>
+                </div>
+              </Link>
+            </div>
             
             <div className="cat-item-and-line">
               <Link to={"/music"}>
@@ -45,6 +74,7 @@ class Bar extends React.Component {
                 </div>
               </Link>
             </div>
+
             <div className="cat-item-and-line">
               <Link to={"/publishing"}>
                 <h5 id="bar-link">Publishing</h5>

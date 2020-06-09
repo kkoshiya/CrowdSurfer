@@ -439,9 +439,17 @@ var Bar = /*#__PURE__*/function (_React$Component) {
         id: "line-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cat-list-line"
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cat-item-and-line"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/comics"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         id: "bar-link"
       }, "Comics/Illistrations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "line-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cat-list-line"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cat-item-and-line"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/technology"
@@ -451,13 +459,37 @@ var Bar = /*#__PURE__*/function (_React$Component) {
         id: "line-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cat-list-line"
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cat-item-and-line"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/technology"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         id: "bar-link"
-      }, "Film"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-        id: "bar-link"
-      }, "Food/Craft"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+      }, "Food/Craft"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "line-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cat-list-line"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cat-item-and-line"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/technology"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         id: "bar-link"
       }, "Games"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "line-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cat-list-line"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cat-item-and-line"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/music"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        id: "bar-link"
+      }, "Film "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "line-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "cat-list-line"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cat-item-and-line"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/music"
