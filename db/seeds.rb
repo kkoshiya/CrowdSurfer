@@ -146,7 +146,7 @@ project_11 = Project.create({
   category: "comics",
   current_total: 10,
   target: 1000,
-  image: 'corona.png'
+  image: 'spiderman.gif'
   # date: 2020-06-01
 })
 

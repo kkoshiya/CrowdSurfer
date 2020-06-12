@@ -201,6 +201,7 @@ table {
   text-align: center;
   margin-left: 10%;
   height: 60%;
+  cursor: pointer;
 }
 
 #focus-body {
@@ -232,6 +233,7 @@ table {
   padding-top: 20px;
   height: 300px;
   text-align: left;
+  cursor: pointer;
 }
 
 #side-img {
@@ -537,6 +539,14 @@ table {
 #show-header {
 
 }
+
+#thanks {
+  height: 25px;
+  width: 400px;
+  margin-right: 20px;
+  background-color: lightgreen;
+}
+
 .show-center {
   display: flex;
   padding-top: 2%;
@@ -652,3 +662,19 @@ progress[value]::-webkit-progress-value {
 .show-side-bottom-right {
   align-items: center;
 }
+
+.bottom-title-container {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+.bottom-title {
+  display: inline-block;
+}
+
+
+.numbers {
+  display: flex;
+}
+

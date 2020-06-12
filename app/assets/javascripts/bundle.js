@@ -560,7 +560,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Bottom = function Bottom(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "this the bottom"));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "bottom-title-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    "class": "bottom-title"
+  }, "Today's Featured Project")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Bottom);
@@ -889,7 +893,9 @@ var Side = /*#__PURE__*/function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_side_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
           project: project
         }));
-      }))));
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "numbers"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "3")));
     }
   }]);
 
@@ -955,20 +961,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SideItem = function SideItem(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: "/projects/".concat(props.project.id)
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "side-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "side-img",
     src: props.project.image
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "side-text"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: "/projects/".concat(props.project.id)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     id: "side-title"
-  }, props.project.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, props.project.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     id: "side-target"
-  }, Math.floor(props.project.current_total / props.project.target * 100), "% funded"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By ", props.project.user.name)));
+  }, Math.floor(props.project.current_total / props.project.target * 100), "% funded"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By ", props.project.user.name))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SideItem);
@@ -996,9 +1002,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -1009,15 +1015,33 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 var Subscribe = /*#__PURE__*/function (_React$Component) {
   _inherits(Subscribe, _React$Component);
 
-  function Subscribe() {
+  function Subscribe(props) {
+    var _this;
+
     _classCallCheck(this, Subscribe);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Subscribe).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Subscribe).call(this, props));
+    _this.state = {
+      status: 'subscribe-form',
+      text: 'Enter Email Adress'
+    };
+    _this.thanks = _this.thanks.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Subscribe, [{
+    key: "thanks",
+    value: function thanks() {
+      this.setState({
+        status: 'thanks',
+        text: 'Thank you for Subscribing'
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var status = this.state.status;
+      var text = this.state.text;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "subscribe_container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1027,11 +1051,12 @@ var Subscribe = /*#__PURE__*/function (_React$Component) {
       }, "Discover the best and brightest projects on Kickstarter.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         id: "subscribe-2"
       }, "Sign up to receive our weekly Projects We Love newsletter."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "subscribe-form",
-        placeholder: "Enter Email Adress",
+        id: status,
+        placeholder: text,
         type: "text"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "subscribe_button"
+        id: "subscribe_button",
+        onClick: this.thanks
       }, "Subscribe"))));
     }
   }]);

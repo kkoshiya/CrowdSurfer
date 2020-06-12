@@ -2,7 +2,12 @@ import React from 'react';
 
 const Bottom = (props) => (
   <div>
-    <h1>this the bottom</h1>
+    <div class="bottom-title-container">
+      <h1 class="bottom-title">Today's Featured Project</h1>
+      
+    </div>
+
+
   </div>
 ) 
 

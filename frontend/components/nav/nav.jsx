@@ -10,7 +10,7 @@ class Nav extends React.Component {
       <div id="nav">
         <div id="nav_left">
           <Link to={'/explore'}>
-            <p id="explore">Explore</p>
+            <p id="explore">Explore </p>
           </Link>
           <Link to={'/startproject'}>
             <p>Start a Project</p>
