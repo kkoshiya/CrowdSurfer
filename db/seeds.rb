@@ -150,5 +150,17 @@ project_11 = Project.create({
   # date: 2020-06-01
 })
 
+project_12 = Project.create({
+  user_id: user_4.id,
+  title: "Soy Berry Maker",
+  body: "One of the freshest creations since the inception of the Sinister Six",
+  description: "Pokemon and Marvel what is not to like about this project",
+  category: "food",
+  current_total: 10,
+  target: 1000,
+  image: 'corona.gif'
+  # date: 2020-06-01
+})
+
 
 
