@@ -6,6 +6,14 @@ export const fetchProjects = () => {
   })
 }
 
+export const createProject = (project) => {
+  return $.ajax({
+    url: `api/projects/`,
+    method: "POST",
+    data: { project }
+  })
+}
+
 export const fetchProject = (projectId) => {
   return $.ajax({
   url: `api/projects/${projectId}`,

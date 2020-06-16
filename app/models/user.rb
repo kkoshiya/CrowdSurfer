@@ -11,8 +11,7 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Project
 
-  
-  
+
 
 
   after_initialize :ensure_session_token

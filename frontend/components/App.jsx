@@ -20,8 +20,6 @@ const App = () => (
     <Modal />
     <Nav_container />
     <Switch> 
-      {/* <Route path="explore" component={}/> */}
-      {/* <Route path="startproject" component={Splat}/> */}
       <Route exact path="/art" component={Splat} />
       <Route exact path="/comics" component={Splat} />
       <Route exact path="/technology" component={Splat} />
@@ -31,8 +29,9 @@ const App = () => (
       <Route exact path="/publishing" component={Splat} />
       <AuthRoute exact path="/login" component={SessionPageContainer} /> 
       <AuthRoute exact path="/signup" component={SignUpPageContainer} />
-      <Route exact path="/projects/:projectId" component={ShowPageContainer} /> 
-      <Route exact path="/startproject" component={Crud} />   
+      <Route exact path="/projects/:projectId" component={ShowPageContainer} />
+      <Route exact path="/startproject" component={Crud} />
+      <Route path="/" component={Splat} />   
     </Switch>
   </div>
 );

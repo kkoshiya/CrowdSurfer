@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/project_api_util';
+import { receiveCurrentUser } from './user_actions';
 
 export const RECEIVE_PROJECTS = "RECEIVE_PROJECTS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
@@ -24,4 +25,8 @@ export const fetchProject = (projectId) => dispatch => {
 
 export const updateProject = (project) => dispatch => {
   return APIUtil.updateProject(project).then(project => dispatch(receiveProject(project)))
+}
+
+export const createProject = (project) => dispatch => {
+  return APIUtil.createProject(project).then(project => dispatch(receiveProject(project)))
 }
