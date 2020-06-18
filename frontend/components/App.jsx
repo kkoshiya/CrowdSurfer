@@ -5,7 +5,7 @@ import Greeting_container from "./greeting/greeting_container";
 import Nav_container from "./nav/nav_container";
 import Splat from './splat_container';
 import Crud from './nav/crud_container';
-import Export from './nav/explore_container'
+import Explore from './nav/explore_container'
 import LoginFormContainer from './session/session_form_container'
 import SignupFormContainer from './session/signup_container'
 import SessionPageContainer from './session/session_page_container'
@@ -32,6 +32,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignUpPageContainer} />
       <Route exact path="/projects/:projectId" component={ShowPageContainer} />
       <ProtectedRoute exact path="/startproject" component={Crud} />
+      <Route exact path ="/explore" component={Explore} />
       <Route path="/" component={Splat} />   
     </Switch>
   </div>

@@ -5,7 +5,6 @@ import entitiesReducer from './entities_reducer';
 import errorsReducer from "./errors_reducer";
 import modalReducer from "./modal_reducer";
 
-
 const RootReducer = combineReducers({
   entities: entitiesReducer,
   session: sessionReducer,

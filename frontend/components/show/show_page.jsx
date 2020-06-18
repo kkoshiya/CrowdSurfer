@@ -5,7 +5,6 @@ import Side from './project_side'
 class ShowPage extends React.Component {
   constructor(props){
     super(props);
-    // this.state = this.props
   }
 
   componentDidMount() {

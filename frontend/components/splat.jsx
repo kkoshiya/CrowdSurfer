@@ -7,7 +7,6 @@ import Bottom from './body/bottom_body'
 
 class Splat extends React.Component {
   constructor(props){
-    debugger
     super(props)
   }
 

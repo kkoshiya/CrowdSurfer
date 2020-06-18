@@ -115,6 +115,38 @@ var closeModal = function closeModal() {
 
 /***/ }),
 
+/***/ "./frontend/actions/news_actions.js":
+/*!******************************************!*\
+  !*** ./frontend/actions/news_actions.js ***!
+  \******************************************/
+/*! exports provided: RECIEVE_NEWS, fetchNews */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECIEVE_NEWS", function() { return RECIEVE_NEWS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchNews", function() { return fetchNews; });
+/* harmony import */ var _util_news_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/news_util */ "./frontend/util/news_util.js");
+
+var RECIEVE_NEWS = 'RECIEVE_NEWS';
+
+var recieve_news = function recieve_news(news) {
+  return {
+    type: RECIEVE_NEWS,
+    news: news
+  };
+};
+
+var fetchNews = function fetchNews() {
+  return function (dispatch) {
+    return _util_news_util__WEBPACK_IMPORTED_MODULE_0__["fetchNews"]().then(function (news) {
+      return dispatch(recieve_news(news));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/project_actions.js":
 /*!*********************************************!*\
   !*** ./frontend/actions/project_actions.js ***!
@@ -386,6 +418,10 @@ var App = function App() {
     exact: true,
     path: "/startproject",
     component: _nav_crud_container__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/explore",
+    component: _nav_explore_container__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/",
     component: _splat_container__WEBPACK_IMPORTED_MODULE_4__["default"]
@@ -1478,14 +1514,22 @@ var Explore = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Explore);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Explore).call(this, props));
-    _this.state = {};
+    _this.state = {
+      info: ''
+    };
     return _this;
   }
 
   _createClass(Explore, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchNews();
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Explore"));
+      if (!this.props.news) return null;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Explore"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.news.articles));
     }
   }]);
 
@@ -1508,18 +1552,26 @@ var Explore = /*#__PURE__*/function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _explore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./explore */ "./frontend/components/nav/explore.jsx");
+/* harmony import */ var _actions_news_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/news_actions */ "./frontend/actions/news_actions.js");
+
 
 
 
 var mSTP = function mSTP(state, ownProps) {
-  return {};
+  return {
+    news: Object.values(state.entities.news)
+  };
 };
 
 var mDTP = function mDTP(dispatch) {
-  return {};
+  return {
+    fetchNews: function fetchNews() {
+      return dispatch(Object(_actions_news_actions__WEBPACK_IMPORTED_MODULE_2__["fetchNews"])());
+    }
+  };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(Explore));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_explore__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -2259,7 +2311,7 @@ var ShowPage = /*#__PURE__*/function (_React$Component) {
   function ShowPage(props) {
     _classCallCheck(this, ShowPage);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(ShowPage).call(this, props)); // this.state = this.props
+    return _possibleConstructorReturn(this, _getPrototypeOf(ShowPage).call(this, props));
   }
 
   _createClass(ShowPage, [{
@@ -2399,7 +2451,6 @@ var Splat = /*#__PURE__*/function (_React$Component) {
   function Splat(props) {
     _classCallCheck(this, Splat);
 
-    debugger;
     return _possibleConstructorReturn(this, _getPrototypeOf(Splat).call(this, props));
   }
 
@@ -2509,13 +2560,16 @@ document.addEventListener("DOMContentLoaded", function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user_reducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./user_reducer */ "./frontend/reducers/user_reducer.js");
 /* harmony import */ var _projects_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projects_reducer */ "./frontend/reducers/projects_reducer.js");
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _news_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./news_reducer */ "./frontend/reducers/news_reducer.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 
 
 
-var entitesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_2__["combineReducers"])({
+
+var entitesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_3__["combineReducers"])({
   users: _user_reducer__WEBPACK_IMPORTED_MODULE_0__["default"],
-  projects: _projects_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  projects: _projects_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  news: _news_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitesReducer);
 
@@ -2568,6 +2622,39 @@ function modalReducer() {
       return state;
   }
 }
+
+/***/ }),
+
+/***/ "./frontend/reducers/news_reducer.js":
+/*!*******************************************!*\
+  !*** ./frontend/reducers/news_reducer.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_news_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/news_actions */ "./frontend/actions/news_actions.js");
+/* harmony import */ var _projects_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projects_reducer */ "./frontend/reducers/projects_reducer.js");
+
+
+
+var newsReducer = function newsReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(oldState);
+  var newState = Object.assign({}, oldState);
+
+  switch (action.type) {
+    case _actions_news_actions__WEBPACK_IMPORTED_MODULE_0__["RECIEVE_NEWS"]:
+      return action.news;
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (newsReducer);
 
 /***/ }),
 
@@ -2769,6 +2856,25 @@ var configureStore = function configureStore() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
+
+/***/ }),
+
+/***/ "./frontend/util/news_util.js":
+/*!************************************!*\
+  !*** ./frontend/util/news_util.js ***!
+  \************************************/
+/*! exports provided: fetchNews */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchNews", function() { return fetchNews; });
+var fetchNews = function fetchNews() {
+  return $.ajax({
+    url: 'http://newsapi.org/v2/everything?q=bitcoin&from=2020-05-18&sortBy=publishedAt&apiKey=89036f14aef64bd8894a6a6215fdb89a',
+    method: 'GET'
+  });
+};
 
 /***/ }),
 
