@@ -9,6 +9,6 @@ export const update = user => {
 export const getUser = userId => {
   return $.ajax({
     url: `api/users/${userId}`,
-    method: "GET"
+    method: "GET" 
   })
 }

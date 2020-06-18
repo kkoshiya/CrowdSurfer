@@ -15,3 +15,4 @@ export const updateUser = (user) => dispatch => {
 export const getUser = (userId) => dispatch => {
   return APIUtil.getUser(userId).then( user => dispatch(receiveCurrentUser(user)))
 }
+

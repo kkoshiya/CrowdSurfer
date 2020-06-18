@@ -550,6 +550,7 @@ table {
 .show-center {
   display: flex;
   padding-top: 2%;
+  padding-bottom: 3%;
 }
 
 .main-show-img {
@@ -671,6 +672,8 @@ progress[value]::-webkit-progress-value {
 
 .bottom-title {
   display: inline-block;
+  font-size: 36px;
+  color: black;
 }
 
 
@@ -678,3 +681,36 @@ progress[value]::-webkit-progress-value {
   display: flex;
 }
 
+.show-bottom {
+  padding-top: 2%;
+  border-top: 1px grey solid;
+}
+
+.bottom-content {
+  display: flex;  
+  justify-content: space-evenly;
+  padding-bottom: 5%;
+}
+
+.bottom-picture {
+  margin-left: 5%;
+  height: 25%;
+  width: 35%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bottom-text > h1 {
+  font-family: cursive;
+  padding-top: 5%;
+  padding-right: 9%;
+  padding-left: 7%;
+  font-size: 30px;
+}
+
+.bottom-text > h2 {
+  font-family: cursive;
+  padding-top: 5%;
+  padding-right: 9%;
+  padding-left: 10%;
+  font-size: 20px;
+}

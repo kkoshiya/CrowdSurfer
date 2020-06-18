@@ -32,6 +32,10 @@ class ShowPage extends React.Component {
             </div>
           </div>
 
+          <div className="show-bottom">
+            <h1>Bottom</h1>
+          </div>
+
         </div>
       )
   }

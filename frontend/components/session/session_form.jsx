@@ -37,11 +37,13 @@ class SessionForm extends React.Component {
   }
 
   demoUser(){
-    this.state = {
+    let user = {
       email: "demohuman@yahoo.com",
       password: "password"
     };
-    this.props.processForm(this.state);
+    this.setState({ email: user.email });
+    this.setState({ password: user.password });
+    this.props.processForm(user);
   }
 
   navLink() {
