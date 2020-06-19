@@ -615,6 +615,13 @@ progress:not([value]) {
    /* Styling here */
 }
 
+.disclaimer {
+  font-size: 14px;
+  padding-right: 40%;
+  margin-top: 5%;
+}
+
+
 progress[value] {
   -webkit-appearance: none;
   appearance: none;
@@ -683,7 +690,7 @@ progress[value]::-webkit-progress-value {
 
 .show-bottom {
   padding-top: 2%;
-  border-top: 1px grey solid;
+  border-top: 1px lightgray solid;
 }
 
 .bottom-content {
@@ -711,6 +718,20 @@ progress[value]::-webkit-progress-value {
   font-family: cursive;
   padding-top: 5%;
   padding-right: 9%;
-  padding-left: 10%;
+  padding-left: 12%;
   font-size: 20px;
+};
+
+
+
+.article {
+  border-top: 1px solid lightgray;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex
+};
+
+.article-img {
+  width: 1%;
+
 }

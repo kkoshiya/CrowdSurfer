@@ -1,4 +1,5 @@
 import React from 'react';
+import Article from './article';
 
 class Explore extends React.Component {
   constructor(props){
@@ -14,14 +15,20 @@ class Explore extends React.Component {
 
 
   render() {
-    if (!this.props.news) return null 
-    return (
-      <div>
-        <h1>Explore</h1>
-        <h1>{this.props.news.articles}</h1>
-      </div>
+    if (this.props.news.length === 0) return null;
+      return (
+        <div>
+          <h1>Explore</h1>
+          <h1>{this.props.news[2].length}</h1>
+          <ul class="news-posts">
+            {
+              this.props.news[2].map(article =>
+                <div> <Article article={article}/></div>)
+            }
+          </ul>
+        </div>
+      )
 
-    )
   }
 
 };

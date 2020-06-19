@@ -1323,6 +1323,29 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
+/***/ "./frontend/components/nav/article.jsx":
+/*!*********************************************!*\
+  !*** ./frontend/components/nav/article.jsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Article = function Article(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "article"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.article.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, props.article.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "By ", props.article.author)));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Article);
+
+/***/ }),
+
 /***/ "./frontend/components/nav/crud.jsx":
 /*!******************************************!*\
   !*** ./frontend/components/nav/crud.jsx ***!
@@ -1485,6 +1508,7 @@ var mDTP = function mDTP(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _article__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./article */ "./frontend/components/nav/article.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1502,6 +1526,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -1528,8 +1553,14 @@ var Explore = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      if (!this.props.news) return null;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Explore"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.news.articles));
+      if (this.props.news.length === 0) return null;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Explore"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.news[2].length), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        "class": "news-posts"
+      }, this.props.news[2].map(function (article) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_article__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          article: article
+        }));
+      })));
     }
   }]);
 
@@ -1557,7 +1588,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var mSTP = function mSTP(state, ownProps) {
+var mSTP = function mSTP(state) {
   return {
     news: Object.values(state.entities.news)
   };
@@ -2265,7 +2296,9 @@ var Side = function Side(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "facebook-logo-small",
     src: "assets/facebook.png"
-  })))));
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    "class": "disclaimer"
+  }, "All of Nothing. This project will only be funded if it reaches its goal by Thu, July 9 2021 11:00 AM PDT."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Side);

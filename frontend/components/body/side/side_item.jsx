@@ -15,4 +15,4 @@ const SideItem = (props) => (
 )
   
 
-export default SideItem
+export default SideItem;

@@ -44,6 +44,7 @@ const Side = (props) => {
         </a>
       </div>
     </div>
+    <h1 class='disclaimer'>All of Nothing. This project will only be funded if it reaches its goal by Thu, July 9 2021 11:00 AM PDT.</h1>
 
   </div>
 )};
