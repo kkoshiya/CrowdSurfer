@@ -3,6 +3,10 @@ import Greeting_container from ".././greeting/greeting_container";
 import { Link } from "react-router-dom";
 
 class Nav extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {search: false};
+  }
 
 
   render () {

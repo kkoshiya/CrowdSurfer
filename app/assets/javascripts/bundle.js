@@ -915,9 +915,16 @@ var Side = /*#__PURE__*/function (_React$Component) {
   _inherits(Side, _React$Component);
 
   function Side(props) {
+    var _this;
+
     _classCallCheck(this, Side);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Side).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Side).call(this, props));
+    _this.state = {
+      start: 1,
+      end: 4
+    };
+    return _this;
   }
 
   _createClass(Side, [{
@@ -928,20 +935,20 @@ var Side = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this = this;
+      var _this2 = this;
 
       var projects = this.props.projects;
 
       if (this.props.location.pathname !== '/') {
         projects = this.props.projects.filter(function (project) {
-          return project.category === _this.props.location.pathname.slice(1);
+          return project.category === _this2.props.location.pathname.slice(1);
         });
       }
 
       var sample = {
         title: ''
       };
-      var three_show = projects.slice(1, 4) || sample;
+      var three_show = projects.slice(this.state.start, this.state.end) || sample;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "side"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -1644,10 +1651,16 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 var Nav = /*#__PURE__*/function (_React$Component) {
   _inherits(Nav, _React$Component);
 
-  function Nav() {
+  function Nav(props) {
+    var _this;
+
     _classCallCheck(this, Nav);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Nav).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Nav).call(this, props));
+    _this.state = {
+      search: false
+    };
+    return _this;
   }
 
   _createClass(Nav, [{

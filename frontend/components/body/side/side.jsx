@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 
 class Side extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {start: 1, end: 4}
   }
 
   componentDidMount() {
@@ -18,7 +19,7 @@ class Side extends React.Component {
       projects = this.props.projects.filter(project => project.category === this.props.location.pathname.slice(1))
     }
     const sample = { title: '' };
-    let three_show = projects.slice(1,4) || sample;
+    let three_show = projects.slice(this.state.start,this.state.end) || sample;
     return (
       <div id="side">
         <h1 id="recomended-text">RECOMENDED</h1>

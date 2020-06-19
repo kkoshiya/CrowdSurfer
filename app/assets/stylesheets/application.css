@@ -685,7 +685,9 @@ progress[value]::-webkit-progress-value {
 
 
 .numbers {
+  
   display: flex;
+
 }
 
 .show-bottom {
@@ -735,3 +737,6 @@ progress[value]::-webkit-progress-value {
   width: 1%;
 
 }
+
+
+
