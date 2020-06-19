@@ -459,6 +459,10 @@ table {
 
 }
 
+#log-in-page {
+  padding-bottom: 5%;
+}
+
 .log-in > :first-child {
   padding-right: 5px;
 }
@@ -685,10 +689,25 @@ progress[value]::-webkit-progress-value {
 
 
 .numbers {
-  
+  margin-top: 7%;
   display: flex;
-
+  margin-left: 60%;
 }
+
+.number {
+  color: #009E74;
+  margin-right: 8px;
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.number:hover {
+  text-decoration: underline;
+  color: green;
+  cursor: pointer;
+}
+
+
 
 .show-bottom {
   padding-top: 2%;
@@ -734,9 +753,31 @@ progress[value]::-webkit-progress-value {
 };
 
 .article-img {
-  width: 1%;
-
+  width: 10px;
 }
 
 
+.footer-container {
+  border-top: 3px gray solid;
+}
 
+.footer-body {
+
+}
+
+.K-picture {
+  width: 4%;
+  height: 4%;
+  margin-left: 70%;
+}
+
+.footer-content {
+  margin-top: 1%;
+  display: flex;
+  align-items: Center
+}
+
+.etc {
+  padding-left: 5%;
+  padding-right: 5%;
+}

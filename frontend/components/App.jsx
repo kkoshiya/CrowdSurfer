@@ -13,6 +13,7 @@ import SignUpPageContainer from './session/sign_up_pagecontainer'
 import ShowPageContainer from './show/show_page_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal'
+import Footer from './footer_container'
 import { Switch } from 'react-router-dom'
 
 
@@ -35,6 +36,7 @@ const App = () => (
       <Route exact path ="/explore" component={Explore} />
       <Route path="/" component={Splat} />   
     </Switch>
+    <Footer />
   </div>
 );
 

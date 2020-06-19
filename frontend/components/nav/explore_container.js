@@ -10,4 +10,4 @@ const mDTP = (dispatch) => ({
   fetchNews: () => dispatch(fetchNews())
 });
 
-export default connect(mSTP, mDTP)(Explore)
+export default connect(mSTP, mDTP)(Explore);

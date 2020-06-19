@@ -5,11 +5,25 @@ import { Link } from "react-router-dom";
 class Side extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {start: 1, end: 4}
+    this.state = {start: 1, end: 4};
+    this.next = this.next.bind(this);
+    this.back = this.back.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchProjects();
+  }
+
+  next() {
+    let new_start = this.state.start += 1;
+    let new_end = this.state.end += 1;
+    this.setState({start: new_start, end: new_end});
+  }
+
+  back() {
+    let new_start = this.state.start -= 1;
+    let new_end = this.state.end -= 1;
+    this.setState({start: new_start, end: new_end});
   }
 
 
@@ -32,9 +46,10 @@ class Side extends React.Component {
           </ul>
         </div>
         <div class="numbers">
-          <h1>1</h1>
-          <h1>2</h1>
-          <h1>3</h1>
+          <h1>&larr;</h1>
+          <h1 class='number' onClick={this.back}>Back</h1>
+          <h1 class='number' onClick={this.next}>Next</h1>
+          <h1>&rarr;</h1>
         </div>
       </div>
     )
