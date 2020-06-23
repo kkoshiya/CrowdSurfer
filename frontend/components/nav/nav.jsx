@@ -9,6 +9,7 @@ class Nav extends React.Component {
       search: false, 
       input: '',
     };
+    this.updateInput = this.updateInput.bind(this)
 
   }
 
@@ -16,9 +17,9 @@ class Nav extends React.Component {
     this.props.fetchProjects()
   }
 
-  update(field){
-    e => this.setState({[field]: e.currentTarget.value});
+  updateInput(field){
     this.setState({search: true})
+    return e => this.setState({[field]: e.currentTarget.value});
   }
 
   render () {
@@ -45,7 +46,7 @@ class Nav extends React.Component {
         <div id="nav_right">
           <div>
             {/* <p id="search-p">Search</p> */}
-            <input class='search-bar' type="text" placeholder='Search Projects' value={this.state.input} onChange={this.update('input')}/>
+            {/* <input type="text" placeholder='Search Projects' value={this.state.input} onChange={this.updateInput('input')}/> */}
             <div class={search}>search test</div>
           </div>
           <Greeting_container />
