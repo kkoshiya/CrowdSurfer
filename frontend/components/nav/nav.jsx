@@ -5,11 +5,28 @@ import { Link } from "react-router-dom";
 class Nav extends React.Component {
   constructor(props){
     super(props);
-    this.state = {search: false};
+    this.state = {
+      search: false, 
+      input: '',
+    };
+
   }
 
+  componentDidMount(){
+    this.props.fetchProjects()
+  }
+
+  update(field){
+    e => this.setState({[field]: e.currentTarget.value});
+    this.setState({search: true})
+  }
 
   render () {
+    if (!this.props.projects) return null;
+    let search = 'hide-search'
+    if (this.state.search) {
+      search = 'show-search'
+    };
     return (
       <div id="nav">
         <div id="nav_left">
@@ -26,7 +43,11 @@ class Nav extends React.Component {
           </Link>
         </div>
         <div id="nav_right">
-          <p id="search-p">Search</p>
+          <div>
+            {/* <p id="search-p">Search</p> */}
+            <input class='search-bar' type="text" placeholder='Search Projects' value={this.state.input} onChange={this.update('input')}/>
+            <div class={search}>search test</div>
+          </div>
           <Greeting_container />
         </div>
       </div>

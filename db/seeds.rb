@@ -44,7 +44,7 @@ project_2 = Project.create({
 
 project_3 = Project.create({
   user_id: user_2.id,
-  title: "Steph Curry Clonning With Super-Computer",
+  title: "Steph Curry Clonning Device",
   body: "Tank for Wiseman",
   description: "Clone the Goat so we can win another ring baby",
   category: "art",

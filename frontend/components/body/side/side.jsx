@@ -36,7 +36,7 @@ class Side extends React.Component {
     let three_show = projects.slice(this.state.start,this.state.end) || sample;
     return (
       <div id="side">
-        <h1 id="recomended-text">RECOMENDED</h1>
+        <h2 id='recomended-text'>RECOMENDED</h2>
         <div>
           <ul id="side_posts">
             {

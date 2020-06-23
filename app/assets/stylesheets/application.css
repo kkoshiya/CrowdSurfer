@@ -65,10 +65,6 @@ table {
   }
 
 
-
-
-
-
 #hidden {
   display: none;
 }
@@ -215,6 +211,9 @@ table {
   display: flex;
   flex-direction: column;
   text-align: left;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 #side-body {
@@ -225,7 +224,9 @@ table {
   display: flex;
   width: 90%;
   height: 18%;
-  padding-bottom: 5%;
+  padding-bottom: 3%;
+  margin-bottom: 3%;
+  border-bottom: lightgray 1px solid;
 }
 
 #side_posts {
@@ -248,22 +249,35 @@ table {
 }
 
 #side-text > p {
-  margin-bottom: 4%;
+  margin-bottom: 2%;
 }
 
 #side-title {
-  margin-bottom: 4%;
+  margin-bottom: 2%;
+  font-size: 18px;
+  color: black;
+  font-weight: normal;
 }
 
 #side-target {
   color: #009E74;
   font-weight: bold;
+  font-size: 14px;
 }
+
+#side-author{
+  font-size: 14px;
+  color: grey;
+}
+
+.grey-bar {
+  border-bottom: lightgray 1px solid;
+};
 
 
 #recomended-text {
   text-align: left;
-  padding-bottom: 10px;
+  padding-bottom: 100px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: grey;
@@ -406,7 +420,7 @@ table {
   z-index: 0;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 76.5%;
   z-index: -2;
 }
 
@@ -745,16 +759,29 @@ progress[value]::-webkit-progress-value {
 
 
 
-.article {
-  border-top: 1px solid lightgray;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  display: flex
+.news-description {
+  max-width: 5px;
 };
 
-.article-img {
-  width: 10px;
+
+.post {
+  width: 200px;
 }
+
+.news-img {
+  width: 300px;
+  height: 150px;
+  border-radius: 25%;
+  margin-left: 5%;
+
+
+}
+
+/* .news-img-container {
+    text-align: right;
+    max-width: 30px;
+    color: white;
+} */
 
 
 .footer-container {
@@ -762,7 +789,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .footer-body {
-
+  margin-bottom: 1.5%;
 }
 
 .K-picture {
@@ -780,4 +807,8 @@ progress[value]::-webkit-progress-value {
 .etc {
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.hide-search {
+  display: hidden;
 }

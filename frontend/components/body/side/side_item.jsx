@@ -8,8 +8,9 @@ const SideItem = (props) => (
       <div id="side-text">
         <p id="side-title">{props.project.title}</p>
         <p id="side-target">{Math.floor((props.project.current_total / props.project.target)*100)}% funded</p> 
-        <p>By {props.project.user.name}</p>
+        <p id="side-author">By {props.project.user.name}</p>
       </div>
+      
     </div>
   </Link>
 )

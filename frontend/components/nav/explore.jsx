@@ -6,6 +6,7 @@ class Explore extends React.Component {
     super(props);
     this.state={
       info: ''
+
     };
   };
 
@@ -18,14 +19,12 @@ class Explore extends React.Component {
     if (this.props.news.length === 0) return null;
       return (
         <div>
-          <h1>Explore</h1>
-          <h1>{this.props.news[2].length}</h1>
-          <ul class="news-posts">
             {
               this.props.news[2].map(article =>
-                <div> <Article article={article}/></div>)
+                <div>
+                  <Article article={article}/>
+                </div>)
             }
-          </ul>
         </div>
       )
 
