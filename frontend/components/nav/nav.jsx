@@ -18,16 +18,22 @@ class Nav extends React.Component {
   }
 
   updateInput(field){
-    this.setState({search: true})
-    return e => this.setState({[field]: e.currentTarget.value});
+    // this.setState({search: true})
+    return e => this.setState({ [field]: e.currentTarget.value, search: true });
   }
 
   render () {
     if (!this.props.projects) return null;
     let search = 'hide-search'
-    if (this.state.search) {
+    if (this.state.search === true) {
       search = 'show-search'
     };
+    let projectNames = [];
+    for (var i = 0; i < this.props.projects.length; i++) {
+      projectNames.push(this.props.projects[i].title)
+    }
+    let searchNames = projectNames.filter(name => name.startsWith(this.state.input));
+
     return (
       <div id="nav">
         <div id="nav_left">
@@ -44,10 +50,16 @@ class Nav extends React.Component {
           </Link>
         </div>
         <div id="nav_right">
-          <div>
-            {/* <p id="search-p">Search</p> */}
-            {/* <input type="text" placeholder='Search Projects' value={this.state.input} onChange={this.updateInput('input')}/> */}
-            <div class={search}>search test</div>
+          <div class='.search-bar-container'>
+            <input class='search-bar' type="text" placeholder='Search Projects' value={this.state.input} onChange={this.updateInput('input')}/>
+            <div class={search}>
+              <ul class='search-results'>{
+                  searchNames.map(project => 
+                    <div>{project}</div>
+                    )
+                }
+              </ul>
+            </div>
           </div>
           <Greeting_container />
         </div>

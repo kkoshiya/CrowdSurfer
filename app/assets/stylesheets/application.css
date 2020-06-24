@@ -99,7 +99,7 @@ table {
  #nav_right {
    margin-right: 20px;
    display: flex;
-   justify-content: space-evenly;
+   /* justify-content: space-between; */
  }
 
 .logo {
@@ -809,6 +809,26 @@ progress[value]::-webkit-progress-value {
   padding-right: 5%;
 }
 
+.search-bar {
+  margin-right: 15px;
+}
+
+.search-bar-container {
+  margin-right: 5%;
+  padding-right: 10px;
+}
+
 .hide-search {
+  visibility: hidden;
+  position: absolute;
+}
+
+.show-search {
   display: hidden;
+  position: absolute;
+  background-color: lightgreen;
+}
+
+.search-results {
+  color: black;
 }

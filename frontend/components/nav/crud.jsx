@@ -13,16 +13,19 @@ class Crud extends React.Component {
       date: '',
       current_total: '',
       target: '',
-      img_url: ''
+      img_url: '',
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   };
 
   update(field) {
-    return e => this.setState({ [field]: e.currentTarget.value });
+    return e => this.setState({[field]: e.currentTarget.value});
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     this.props.createProject(this.state);
   }
 
@@ -33,15 +36,19 @@ class Crud extends React.Component {
         <h1>Start a New Project</h1>
         <div>
           <form onSubmit={this.handleSubmit}>
-            <input id="crud" type="text" value={this.state.title} placeholder="Title" onChange={this.update('Title')}/>
+            <input id="crud" type="text" value={this.state.title} placeholder="Title" onChange={this.update('title')}/>
             <br/>
-            <input type="text" value={this.state.description} placeholder="Description" onChange={this.update('Description')}/>
+            <input type="text" value={this.state.description} placeholder="Description" onChange={this.update('description')}/>
             <br />
-            <input type="text" value={this.state.body} placeholder="Body" onChange={this.update('Body')}/>
+            <input type="text" value={this.state.body} placeholder="Body" onChange={this.update('body')}/>
             <br />
-            <input type="text" value={this.state.category} placeholder="Category" onChange={this.update('Category')} />
+            <input type="text" value={this.state.category} placeholder="Category" onChange={this.update('category')} />
             <br />
-            <input type="text" value={this.state.img_url} placeholder="Image Url" onChange={this.update('Image Url')} />
+            <input type="number" value={this.state.current_total} placeholder="Current Total" onChange={this.update('current_total')} />
+            <br />
+            <input type="number" value={this.state.target} placeholder="Target" onChange={this.update('target')} />
+            <br />
+            <input type="text" value={this.state.img_url} placeholder="Image Url" onChange={this.update('img_url')} />
             <br />
             <button id="submit_button" type="submit">Submit</button>
           </form>

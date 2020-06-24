@@ -1559,9 +1559,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -1589,6 +1589,8 @@ var Crud = /*#__PURE__*/function (_React$Component) {
       target: '',
       img_url: ''
     };
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.update = _this.update.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -1605,6 +1607,7 @@ var Crud = /*#__PURE__*/function (_React$Component) {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
+      debugger;
       this.props.createProject(this.state);
     }
   }, {
@@ -1617,27 +1620,37 @@ var Crud = /*#__PURE__*/function (_React$Component) {
         type: "text",
         value: this.state.title,
         placeholder: "Title",
-        onChange: this.update('Title')
+        onChange: this.update('title')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.description,
         placeholder: "Description",
-        onChange: this.update('Description')
+        onChange: this.update('description')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.body,
         placeholder: "Body",
-        onChange: this.update('Body')
+        onChange: this.update('body')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.category,
         placeholder: "Category",
-        onChange: this.update('Category')
+        onChange: this.update('category')
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number",
+        value: this.state.current_total,
+        placeholder: "Current Total",
+        onChange: this.update('current_total')
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number",
+        value: this.state.target,
+        placeholder: "Target",
+        onChange: this.update('target')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.img_url,
         placeholder: "Image Url",
-        onChange: this.update('Image Url')
+        onChange: this.update('img_url')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "submit_button",
         type: "submit"
@@ -1858,24 +1871,35 @@ var Nav = /*#__PURE__*/function (_React$Component) {
     value: function updateInput(field) {
       var _this2 = this;
 
-      this.setState({
-        search: true
-      });
+      // this.setState({search: true})
       return function (e) {
-        return _this2.setState(_defineProperty({}, field, e.currentTarget.value));
+        var _this2$setState;
+
+        return _this2.setState((_this2$setState = {}, _defineProperty(_this2$setState, field, e.currentTarget.value), _defineProperty(_this2$setState, "search", true), _this2$setState));
       };
     }
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       if (!this.props.projects) return null;
       var search = 'hide-search';
 
-      if (this.state.search) {
+      if (this.state.search === true) {
         search = 'show-search';
       }
 
       ;
+      var projectNames = [];
+
+      for (var i = 0; i < this.props.projects.length; i++) {
+        projectNames.push(this.props.projects[i].title);
+      }
+
+      var searchNames = projectNames.filter(function (name) {
+        return name.startsWith(_this3.state.input);
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "nav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1893,9 +1917,21 @@ var Nav = /*#__PURE__*/function (_React$Component) {
         src: window.logo
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "nav_right"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": ".search-bar-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "search-bar",
+        type: "text",
+        placeholder: "Search Projects",
+        value: this.state.input,
+        onChange: this.updateInput('input')
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         "class": search
-      }, "search test")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        "class": "search-results"
+      }, searchNames.map(function (project) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, project);
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
     }
   }]);
 

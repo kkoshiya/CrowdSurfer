@@ -10,7 +10,6 @@ const SideItem = (props) => (
         <p id="side-target">{Math.floor((props.project.current_total / props.project.target)*100)}% funded</p> 
         <p id="side-author">By {props.project.user.name}</p>
       </div>
-      
     </div>
   </Link>
 )
