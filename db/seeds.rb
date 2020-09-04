@@ -38,8 +38,8 @@ project_2 = Project.create({
   category: "art",
   current_total: 27400,
   target: 50000,
-  image: 'ring.gif'
-  # date: 2020-05-01
+  image: 'ring.gif',
+  days: 50
 })
 
 project_3 = Project.create({
@@ -50,8 +50,8 @@ project_3 = Project.create({
   category: "art",
   current_total: 47000,
   target: 44000,
-  image: 'computer.png'
-  # date: 2020-06-01
+  image: 'computer.png',
+  days: 60
 })
 
 project_4 = Project.create({
@@ -62,8 +62,8 @@ project_4 = Project.create({
   category: "technology",
   current_total: 47000,
   target: 44000,
-  image: 'folding.gif'
-  # date: 2020-06-01
+  image: 'folding.gif',
+  days: 13
 })
 
 project_5 = Project.create({
@@ -74,8 +74,8 @@ project_5 = Project.create({
   category: "music",
   current_total: 47000,
   target: 44000,
-  image: 'chance.gif'
-  # date: 2020-06-01
+  image: 'chance.gif',
+  days: 89
 })
 
 project_6 = Project.create({
@@ -86,8 +86,8 @@ project_6 = Project.create({
   category: "technology",
   current_total: 47430,
   target: 520000,
-  image: 'chance.gif'
-  # date: 2020-06-01
+  image: 'chance.gif',
+  days: 73
 })
 
 project_7 = Project.create({
@@ -98,8 +98,8 @@ project_7 = Project.create({
   category: "music",
   current_total: 470,
   target: 5200,
-  image: 'banjo.png'
-  # date: 2020-06-01
+  image: 'banjo.png',
+  days: 19
 })
 
 project_8 = Project.create({
@@ -110,8 +110,8 @@ project_8 = Project.create({
   category: "music",
   current_total: 470430,
   target: 52000,
-  image: 'eye.gif'
-  # date: 2020-06-01
+  image: 'eye.gif',
+  days: 42
 })
 
 project_9 = Project.create({
@@ -122,8 +122,8 @@ project_9 = Project.create({
   category: "technology",
   current_total: 17030,
   target: 55000,
-  image: 'corona.png'
-  # date: 2020-06-01
+  image: 'corona.png',
+  days: 52
 })
 
 project_10 = Project.create({
@@ -134,8 +134,8 @@ project_10 = Project.create({
   category: "film",
   current_total: 17030,
   target: 55000,
-  image: 'corona.png'
-  # date: 2020-06-01
+  image: 'corona.png',
+  days: 91
 })
 
 project_11 = Project.create({
@@ -146,8 +146,8 @@ project_11 = Project.create({
   category: "comics",
   current_total: 10,
   target: 1000,
-  image: 'spiderman.gif'
-  # date: 2020-06-01
+  image: 'spiderman.gif',
+  days: 6
 })
 
 project_12 = Project.create({
@@ -158,8 +158,8 @@ project_12 = Project.create({
   category: "food",
   current_total: 10,
   target: 1000,
-  image: 'corona.gif'
-  # date: 2020-06-01
+  image: 'corona.gif',
+  days: 38
 })
 
 

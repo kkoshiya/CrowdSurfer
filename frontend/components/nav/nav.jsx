@@ -55,7 +55,7 @@ class Nav extends React.Component {
             <div class={search}>
               <ul class='search-results'>{
                   searchNames.map(project => 
-                    <div>{project}</div>
+                    <div>{project}</div> 
                     )
                 }
               </ul>

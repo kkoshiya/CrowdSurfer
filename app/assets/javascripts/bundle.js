@@ -1752,11 +1752,18 @@ var Explore = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchNews();
+      console.log('hey');
+      console.log(this.props.fetchNews());
     }
   }, {
     key: "render",
     value: function render() {
-      if (this.props.news.length === 0) return null;
+      if (this.props.news.length === 0) {
+        console.log('hello');
+        return null;
+      }
+
+      ;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.news[2].map(function (article) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_article__WEBPACK_IMPORTED_MODULE_1__["default"], {
           article: article
@@ -2547,7 +2554,7 @@ var Side = function Side(props) {
     className: "show-side-backers-days"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, backers), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "backers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "show-side-backers-days"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "40"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "days to go")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.project.days), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "days to go")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "back-button",
     onClick: function onClick() {
       return back(props.update);
@@ -3171,7 +3178,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchNews", function() { return fetchNews; });
 var fetchNews = function fetchNews() {
   return $.ajax({
-    url: 'http://newsapi.org/v2/everything?q=bitcoin&from=2020-06-01&sortBy=publishedAt&apiKey=89036f14aef64bd8894a6a6215fdb89a',
+    url: 'http://newsapi.org/v2/everything?q=bitcoin&from=2020-09-01&sortBy=publishedAt&apiKey=89036f14aef64bd8894a6a6215fdb89a',
     method: 'GET'
   });
 };

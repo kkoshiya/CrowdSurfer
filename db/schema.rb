@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_03_11_001525) do
     t.string "title"
     t.string "body"
     t.string "category"
-    t.date "date"
+    t.integer "days"
     t.integer "current_total"
     t.integer "target"
     t.string "description"

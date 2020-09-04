@@ -28,7 +28,7 @@ const Side = (props) => {
     </div>
 
     <div className="show-side-backers-days">
-      <h1>40</h1>
+      <h1>{props.project.days}</h1>
       <h1>days to go</h1>
     </div>
     

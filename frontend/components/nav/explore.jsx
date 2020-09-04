@@ -12,11 +12,16 @@ class Explore extends React.Component {
 
   componentDidMount() {
     this.props.fetchNews();
+    console.log('hey');
+    console.log(this.props.fetchNews())
   }
 
 
   render() {
-    if (this.props.news.length === 0) return null;
+    if (this.props.news.length === 0) {
+      console.log('hello')
+      return null
+    };
       return (
         <div>
             {

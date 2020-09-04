@@ -5,7 +5,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :body
       t.string :category
-      t.date :date
+      t.integer :days
       t.integer :current_total
       t.integer :target
       t.string :description
