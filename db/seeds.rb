@@ -57,7 +57,7 @@ project_3 = Project.create({
 project_4 = Project.create({
   user_id: user_3.id,
   title: "5G Foldable Phone",
-  body: "Easy $$ sniper",
+  body: "Easy $$ Sniper",
   description: "A machine that can create whatever type of pokemon needs yall sicko's need",
   category: "technology",
   current_total: 47000,
