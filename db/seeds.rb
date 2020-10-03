@@ -46,7 +46,7 @@ project_3 = Project.create({
   user_id: user_2.id,
   title: "Steph Curry Clonning Device",
   body: "Tank for Wiseman",
-  description: "Clone the Goat so we can win another ring baby 2021 ",
+  description: "Clone the Goat so we can win another ring baby 2021",
   category: "art",
   current_total: 47000,
   target: 44000,
