@@ -33,7 +33,7 @@ project_1 = Project.create({
 project_2 = Project.create({
   user_id: user_2.id,
   title: "Smart Ring to Rule them All ",
-  description: "911 was an inside job, let's be real here. ",
+  description: "911 was an inside job, let's be real here.",
   body: "Open doors and unlock other things, which uses marbels to create unlimited aids",
   category: "art",
   current_total: 27400,
