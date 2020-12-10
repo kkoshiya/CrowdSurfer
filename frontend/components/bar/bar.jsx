@@ -32,7 +32,7 @@ class Bar extends React.Component {
 
             <div className="cat-item-and-line">
               <Link to={"/technology"}>
-                <h5 id="bar-link">Design/Tech </h5>
+                <h5 id="bar-link">Design/Tech</h5>
                 <div id="line-container">
                   <div className="cat-list-line"></div>
                 </div>
