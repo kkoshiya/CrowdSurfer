@@ -152,7 +152,7 @@ project_11 = Project.create({
 
 project_12 = Project.create({
   user_id: user_4.id,
-  title: "Soy Berry Maker 2 ",
+  title: "Soy Berry Maker 2",
   body: "One of the freshest creations since the inception of the Sinister Six",
   description: "Pokemon and Marvel what is not to like about this project",
   category: "food",
