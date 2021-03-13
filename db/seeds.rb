@@ -106,7 +106,7 @@ project_8 = Project.create({
   user_id: user_4.id,
   title: "America Mystery Box",
   body: "The greatest band in the history of bands is about to give us the secret to life",
-  description: "The path to eternal youth is the eye of Yan ",
+  description: "The path to eternal youth is the eye of Yan",
   category: "music",
   current_total: 470430,
   target: 52000,
