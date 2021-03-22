@@ -1613,10 +1613,15 @@ var Crud = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Start a New Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "crud-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        "class": "crud-title"
+      }, "Start a New Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "crud-form"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "crud",
         type: "text",
         value: this.state.title,
         placeholder: "Title",
@@ -1652,9 +1657,9 @@ var Crud = /*#__PURE__*/function (_React$Component) {
         placeholder: "Image Url",
         onChange: this.update('img_url')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "submit_button",
+        "class": "crud-button",
         type: "submit"
-      }, "Submit"))));
+      }, "Submit")))));
     }
   }]);
 

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Explore from './explore';
-import {fetchNews} from '../../actions/news_actions'
+import {fetchNews} from '../../actions/news_actions';
+
 
 const mSTP = (state) => ({
   news: Object.values(state.entities.news)
