@@ -511,7 +511,7 @@ var Bar = /*#__PURE__*/function (_React$Component) {
         to: "/technology"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
         id: "bar-link"
-      }, "Design/Tech"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Design/Tech "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "line-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "cat-list-line"

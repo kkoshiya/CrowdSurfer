@@ -158,9 +158,33 @@ project_12 = Project.create({
   category: "food",
   current_total: 10,
   target: 1000,
-  image: 'corona.gif',
+  image: 'spiderman.gif',
   days: 38
 })
 
+
+project_13 = Project.create({
+  user_id: user_4.id,
+  title: "Copy Copy Cat",
+  body: "One of the freshest creations since the inception of the Sinister Six",
+  description: "Pokemon and Marvel what is not to like about this project",
+  category: "publishing",
+  current_total: 10,
+  target: 1000,
+  image: 'spiderman.gif',
+  days: 38
+})
+
+project_14 = Project.create({
+  user_id: user_3.id,
+  title: "Cones of Dunshire",
+  body: "One of the freshest creations since the inception of the Sinister Six",
+  description: "Pokemon and Marvel what is not to like about this project",
+  category: "games",
+  current_total: 1500,
+  target: 30000,
+  image: 'corona.png',
+  days: 38
+})
 
 
