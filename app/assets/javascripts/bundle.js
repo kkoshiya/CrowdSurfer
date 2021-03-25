@@ -1622,36 +1622,43 @@ var Crud = /*#__PURE__*/function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "crud-input",
         type: "text",
         value: this.state.title,
         placeholder: "Title",
         onChange: this.update('title')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "crud-input",
         type: "text",
         value: this.state.description,
         placeholder: "Description",
         onChange: this.update('description')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "crud-input",
         type: "text",
         value: this.state.body,
         placeholder: "Body",
         onChange: this.update('body')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "crud-input",
         type: "text",
         value: this.state.category,
         placeholder: "Category",
         onChange: this.update('category')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "crud-input",
         type: "number",
         value: this.state.current_total,
         placeholder: "Current Total",
         onChange: this.update('current_total')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "crud-input",
         type: "number",
         value: this.state.target,
         placeholder: "Target",
         onChange: this.update('target')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        "class": "crud-input",
         type: "text",
         value: this.state.img_url,
         placeholder: "Image Url",

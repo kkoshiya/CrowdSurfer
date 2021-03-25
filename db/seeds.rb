@@ -187,4 +187,16 @@ project_14 = Project.create({
   days: 38
 })
 
+project_15 = Project.create({
+  user_id: user_3.id,
+  title: "Catan 3 - Revenge of the Sith",
+  body: "One of the freshest creations since the inception of the Sinister Six",
+  description: "Pokemon and Marvel what is not to like about this project",
+  category: "games",
+  current_total: 1500,
+  target: 30000,
+  image: 'corona.png',
+  days: 38
+})
+
 

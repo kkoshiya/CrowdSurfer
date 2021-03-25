@@ -37,19 +37,19 @@ class Crud extends React.Component {
           <h1 class="crud-title">Start a New Project</h1>
           <div class="crud-form">
             <form onSubmit={this.handleSubmit}>
-              <input type="text" value={this.state.title} placeholder="Title" onChange={this.update('title')}/>
+              <input class="crud-input" type="text" value={this.state.title} placeholder="Title" onChange={this.update('title')}/>
               <br/>
-              <input type="text" value={this.state.description} placeholder="Description" onChange={this.update('description')}/>
+              <input class="crud-input" type="text" value={this.state.description} placeholder="Description" onChange={this.update('description')}/>
               <br />
-              <input type="text" value={this.state.body} placeholder="Body" onChange={this.update('body')}/>
+              <input class="crud-input" type="text" value={this.state.body} placeholder="Body" onChange={this.update('body')}/>
               <br />
-              <input type="text" value={this.state.category} placeholder="Category" onChange={this.update('category')} />
+              <input class="crud-input" type="text" value={this.state.category} placeholder="Category" onChange={this.update('category')} />
               <br />
-              <input type="number" value={this.state.current_total} placeholder="Current Total" onChange={this.update('current_total')} />
+              <input class="crud-input" type="number" value={this.state.current_total} placeholder="Current Total" onChange={this.update('current_total')} />
               <br />
-              <input type="number" value={this.state.target} placeholder="Target" onChange={this.update('target')} />
+              <input class="crud-input" type="number" value={this.state.target} placeholder="Target" onChange={this.update('target')} />
               <br />
-              <input type="text" value={this.state.img_url} placeholder="Image Url" onChange={this.update('img_url')} />
+              <input class="crud-input" type="text" value={this.state.img_url} placeholder="Image Url" onChange={this.update('img_url')} />
               <br />
               <button class="crud-button" type="submit">Submit</button>
             </form>
