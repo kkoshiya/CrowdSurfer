@@ -199,4 +199,16 @@ project_15 = Project.create({
   days: 38
 })
 
+project_16 = Project.create({
+  user_id: user_2.id,
+  title: "Chim-Pokemon",
+  body: "One of the freshest creations since the inception of the Sinister Six",
+  description: "Pokemon and Marvel what is not to like about this project",
+  category: "games",
+  current_total: 1500,
+  target: 30000,
+  image: 'corona.png',
+  days: 38
+})
+
 
