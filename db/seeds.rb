@@ -211,4 +211,28 @@ project_16 = Project.create({
   days: 38
 })
 
+project_17 = Project.create({
+  user_id: user_2.id,
+  title: "Satoshi's Diary",
+  body: "Inspire by south park  since the inception of the Sinister Six",
+  description: "Pokemon and Marvel what is not to like about this project",
+  category: "publishing",
+  current_total: 1500,
+  target: 30000,
+  image: 'corona.png',
+  days: 38
+})
+
+project_18 = Project.create({
+  user_id: user_2.id,
+  title: "Goalden Road",
+  body: "Inspire by south park  since the inception of the Sinister Six",
+  description: "Pokemon and Marvel what is not to like about this project",
+  category: "publishing",
+  current_total: 1500,
+  target: 30000,
+  image: 'corona.png',
+  days: 38
+})
+
 
