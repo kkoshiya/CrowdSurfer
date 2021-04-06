@@ -227,7 +227,7 @@ project_18 = Project.create({
   user_id: user_2.id,
   title: "Goalden Road",
   body: "New age technology. Harness the power of the pyramid since the inception of the Sinister Six",
-  description: "Pokemon and Marvel what is not to like about this project",
+  description: "Pokemon and Marvel what is not to like about this project ",
   category: "publishing",
   current_total: 1500,
   target: 30000,
