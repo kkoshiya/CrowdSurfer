@@ -235,4 +235,16 @@ project_18 = Project.create({
   days: 38
 })
 
+project_19 = Project.create({
+  user_id: user_2.id,
+  title: "Frozen Ice",
+  body: "Appa ice is really good for the skin",
+  description: "Pokemon and Marvel what is not to like about this project ",
+  category: "food",
+  current_total: 1500,
+  target: 30000,
+  image: 'corona.png',
+  days: 38
+})
+
 
