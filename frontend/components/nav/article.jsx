@@ -13,7 +13,7 @@ class Article extends React.Component {
           <br/>
           <h2 style={{ fontSize: '16px', paddingLeft: '6%',}}>{this.props.article.description}</h2>
         </div>
-        <img class='news-img' src={`${this.props.article.urlToImage}`} />
+        {/* <img class='news-img' src={`${this.props.article.urlToImage}`} /> */}
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Explore from './explore';
-import {fetchNews} from '../../actions/news_actions';
+// import {fetchNews} from '../../actions/news_actions';
 import {fetchProjects} from '../../actions/project_actions'
 
 
@@ -9,7 +9,6 @@ const mSTP = (state) => ({
 });
 
 const mDTP = (dispatch) => ({
-  fetchNews: () => dispatch(fetchNews()),
   fetchProjects: () => dispatch(fetchProjects())
 });
 

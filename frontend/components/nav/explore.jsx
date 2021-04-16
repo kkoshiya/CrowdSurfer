@@ -11,23 +11,24 @@ class Explore extends React.Component {
   };
 
   componentDidMount() {
-    this.props.fetchNews();
+    this.props.fetchProjects();
     console.log('hey');
-    console.log(this.props.fetchNews())
+    console.log(this.props.fetchProjects())
   }
 
 
   render() {
-    if (this.props.news.length === 0) {
+    if (this.props.projects.length === 0) {
       console.log('hello')
       return null
     };
       return (
         <div>
+          <h1>{this.props.projects[2].length}</h1>
             {
-              this.props.news[2].map(article =>
+              this.props.projects[2].map(project =>
                 <div>
-                  <Article article={article}/>
+                  <Article project={project}/>
                 </div>)
             }
         </div>
