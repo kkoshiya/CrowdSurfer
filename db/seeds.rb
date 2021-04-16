@@ -247,4 +247,16 @@ project_19 = Project.create({
   days: 38
 })
 
+project_20 = Project.create({
+  user_id: user_2.id,
+  title: "Godzilla IV - The Return of Charizard",
+  body: "Appa ice is really good for the skin",
+  description: "Pokemon and Marvel what is not to like about this project ",
+  category: "film",
+  current_total: 1500,
+  target: 30000,
+  image: 'corona.png',
+  days: 38
+})
+
 
