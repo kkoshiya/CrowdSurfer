@@ -1522,10 +1522,7 @@ var Article = /*#__PURE__*/function (_React$Component) {
           fontSize: '16px',
           paddingLeft: '6%'
         }
-      }, this.props.article.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "news-img",
-        src: "".concat(this.props.article.urlToImage)
-      }));
+      }, this.props.article.description)));
     }
   }]);
 
@@ -1763,22 +1760,22 @@ var Explore = /*#__PURE__*/function (_React$Component) {
   _createClass(Explore, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchNews();
+      this.props.fetchProjects();
       console.log('hey');
-      console.log(this.props.fetchNews());
+      console.log(this.props.fetchProjects());
     }
   }, {
     key: "render",
     value: function render() {
-      if (this.props.news.length === 0) {
+      if (this.props.projects.length === 0) {
         console.log('hello');
         return null;
       }
 
       ;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.news[2].map(function (article) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "test"), this.props.projects[2].map(function (project) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_article__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          article: article
+          project: project
         }));
       }));
     }
@@ -1803,21 +1800,22 @@ var Explore = /*#__PURE__*/function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _explore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./explore */ "./frontend/components/nav/explore.jsx");
-/* harmony import */ var _actions_news_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/news_actions */ "./frontend/actions/news_actions.js");
+/* harmony import */ var _actions_project_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/project_actions */ "./frontend/actions/project_actions.js");
 
+ // import {fetchNews} from '../../actions/news_actions';
 
 
 
 var mSTP = function mSTP(state) {
   return {
-    news: Object.values(state.entities.news)
+    news: Object.values(state.entities.projects)
   };
 };
 
 var mDTP = function mDTP(dispatch) {
   return {
-    fetchNews: function fetchNews() {
-      return dispatch(Object(_actions_news_actions__WEBPACK_IMPORTED_MODULE_2__["fetchNews"])());
+    fetchProjects: function fetchProjects() {
+      return dispatch(Object(_actions_project_actions__WEBPACK_IMPORTED_MODULE_2__["fetchProjects"])());
     }
   };
 };
