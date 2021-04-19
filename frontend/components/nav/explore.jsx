@@ -24,7 +24,7 @@ class Explore extends React.Component {
     };
       return (
         <div>
-          <h1>test</h1> 
+          <h1>test</h1>
             {
               this.props.projects[2].map(project =>
                 <div>
