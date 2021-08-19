@@ -1,24 +1,26 @@
-# README
+# CrowdSurfer
+## A full stack kickstarter clone for users to post their projects and to browse current ideas
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Live Site](https://kickstart-clone.herokuapp.com/#/)
+![Alt Text](ballupgame.gif)
 
-Things you may want to cover:
+### Background
+Ball Up is a website for basketball players and enthusists. With this website users can create a new game and location that other players can view and join. After playing with a game, individuals can give star ratings (1 - 5) to eachother based on general conduct on the court and style of the player.
 
-* Ruby version
+### Functionality 
+* Sign up and Login for users
+* Create a new project
+* Contribute to a new project
+* Browse several different genres
+* Give individual players an optional rating
 
-* System dependencies
 
-* Configuration
+### Architecture and Technologies
+This project will be implemented with the following technologies:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `Ruby`
+- `Ruby on Rails`
+- `SQL`    
+- `React.js`  
+- `Redux`  
+ 
