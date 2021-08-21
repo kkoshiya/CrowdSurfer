@@ -5,7 +5,7 @@ import {fetchProjects} from '../../actions/project_actions'
 
 
 const mSTP = (state) => ({
-  news: Object.values(state.entities.projects)
+  projects: Object.values(state.entities.projects)
 });
 
 const mDTP = (dispatch) => ({
