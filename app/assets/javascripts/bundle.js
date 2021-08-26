@@ -1668,7 +1668,7 @@ var Article = function Article(props) {
     to: "/projects/".concat(props.project.id)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "side-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "kyle"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     id: "side-img",
     src: props.project.image
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

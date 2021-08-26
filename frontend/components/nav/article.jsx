@@ -4,6 +4,7 @@ import { Link} from "react-router-dom";
 const Article = (props) => (
   <Link to={`/projects/${props.project.id}`}>
     <div id="side-item">
+      <div>kyle</div>
        <img id="side-img" src={props.project.image}/>
       <div id="side-text">
         <p id="side-title">{props.project.title}</p>
