@@ -24,16 +24,23 @@ class Explore extends React.Component {
       return (
         <div>
           <head>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"></link>
+
           </head>
           <body>
             <h1>kyle</h1>
+            <div className="row">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+            </div>
           </body>
           <h1>{this.props.projects.length}</h1>
             {
               this.props.projects.map(project =>
                 <div>
-                  
+                  <li>
+                    <Article project={project}></Article>
+                  </li>
                 </div>)
             }
         </div>

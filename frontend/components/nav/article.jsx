@@ -1,23 +1,18 @@
 import React from 'react';
+import { Link} from "react-router-dom";
 
-class Article extends React.Component {
-  constructor(props){
-    super(props);
-  };
-
-  render() {
-    return (
-      <div style={{ display: "flex", paddingTop: '2%', paddingBottom: '2%', marginLeft: '5%', marginRight: '5%', borderBottom: '1px solid lightgray'}}>
-        <div style={{ width: "70%" }}>
-          <h1 style={{ fontSize: '24px', paddingLeft: '3%', }}>{this.props.article.title}</h1>
-          <br/>
-          <h2 style={{ fontSize: '16px', paddingLeft: '6%',}}>{this.props.article.description}</h2>
-        </div>
-        {/* <img class='news-img' src={`${this.props.article.urlToImage}`} /> */}
+const Article = (props) => (
+  <Link to={`/projects/${props.project.id}`}>
+    <div id="side-item">
+       <img id="side-img" src={props.project.image}/>
+      <div id="side-text">
+        <p id="side-title">{props.project.title}</p>
+        <p id="side-target">{Math.floor((props.project.current_total / props.project.target)*100)}% funded</p> 
+        <p id="side-author">By {props.project.user.name}</p>
       </div>
-    )
-  }
-}
+    </div>
+  </Link>
+)
 
 
 export default Article;
