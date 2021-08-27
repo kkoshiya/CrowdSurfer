@@ -38,10 +38,10 @@ class Nav extends React.Component {
       <div id="nav">
         <div id="nav_left">
           <Link to={'/explore'}>
-            <p id="explore">Explore</p>
+            <div id="explore">Explore</div>
           </Link>
           <Link to={'/startproject'}>
-            <p>Start a Project</p>
+            <div>Start a Project</div>
           </Link>
         </div>
         <div>

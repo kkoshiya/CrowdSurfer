@@ -864,3 +864,12 @@ progress[value]::-webkit-progress-value {
   border: 1px solid black;
 
 }
+
+.my-custom-class {
+  @import (less) 'bootstrap.css';
+  @import (less) 'bootstrap-theme.css';
+}
+
+a {
+  color: black !important;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import {Route} from "react-router-dom"
 import Greeting_container from "./greeting/greeting_container";
 
+
 import Nav_container from "./nav/nav_container";
 import Splat from './splat_container';
 import Crud from './nav/crud_container';
@@ -15,6 +16,10 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal'
 import Footer from './footer_container'
 import { Switch } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap-grid.css';
+
+
 
 
 const App = () => (

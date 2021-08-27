@@ -1,5 +1,10 @@
 import React from 'react';
 import Article from './article';
+import Button from 'react-bootstrap/Button';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap-grid.css';
+
+
 
 class Explore extends React.Component {
   constructor(props){
@@ -23,31 +28,32 @@ class Explore extends React.Component {
     };
       return (
         <div>
-          <head>
-
-          </head>
           <body>
-            <h1>kyle</h1>
-            <div className="row">
-              <div>1</div>
-              <div>2</div>
-              <div>3</div>
-            </div>
+            <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+            />
           </body>
-          <h1>{this.props.projects.length}</h1>
+          <ul>
             {
               this.props.projects.map(project =>
-                <div>
-                  <li>
+                <div className="row">
+                  <div className="col"></div>
+                  <div className="col">
                     <Article project={project}></Article>
-                  </li>
+                  </div>
+                  <div className="col"></div>
                 </div>)
             }
+          </ul>
         </div>
       )
+      
+    }
+    
+  };
 
-  }
-
-};
-
+  
 export default Explore;
