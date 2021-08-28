@@ -865,11 +865,35 @@ progress[value]::-webkit-progress-value {
 
 }
 
-.my-custom-class {
-  @import (less) 'bootstrap.css';
-  @import (less) 'bootstrap-theme.css';
-}
+
 
 a {
   color: black !important;
+  text-decoration: none !important;
+}
+
+.article-container {
+  margin-top: 5%;
+}
+
+.article-container:hover {
+  cursor: pointer;
+}
+
+.article-img {
+  width: 50%;
+}
+
+.article-title {
+  font-weight: 700;
+  font-size: 130%;
+}
+
+.article-body {
+  font-size: 100%;
+}
+
+.article-user {
+  padding-top: 2%;
+  font-size: 85%;
 }

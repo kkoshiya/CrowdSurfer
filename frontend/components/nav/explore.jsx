@@ -1,6 +1,5 @@
 import React from 'react';
 import Article from './article';
-import Button from 'react-bootstrap/Button';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 //import 'bootstrap/dist/css/bootstrap-grid.css';
 
@@ -39,12 +38,14 @@ class Explore extends React.Component {
           <ul>
             {
               this.props.projects.map(project =>
-                <div className="row">
-                  <div className="col"></div>
-                  <div className="col">
-                    <Article project={project}></Article>
+                <div class="row row-cols-3">
+                  <div className="col-3"></div>
+                  <div className="col-6">
+                    <div className="article-container">
+                      <Article project={project}></Article>
+                    </div>
                   </div>
-                  <div className="col"></div>
+                  <div className="col-2"></div>
                 </div>)
             }
           </ul>
