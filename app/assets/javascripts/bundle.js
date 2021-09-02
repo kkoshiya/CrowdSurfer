@@ -1312,7 +1312,7 @@ var Subscribe = /*#__PURE__*/function (_React$Component) {
         id: "subscribe"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         id: "subscribe-1"
-      }, "Discover the best and brightest projects on Kickstarter.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      }, "Discover the best and brightest projects on Kickstarter.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "subscribe-2"
       }, "Sign up to receive our weekly Projects We Love newsletter."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         id: status,
@@ -1521,15 +1521,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var sessionLinks = function sessionLinks() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "login-signup"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "login-text"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/login"
-  }, "Login"));
+  }, "Login")));
 };
 
 var personalGreeting = function personalGreeting(currentUser, logout) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hgroup", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header-group"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header-name"
@@ -1708,6 +1710,7 @@ var Article = function Article(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1760,6 +1763,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var Crud = /*#__PURE__*/function (_React$Component) {
   _inherits(Crud, _React$Component);
 
@@ -1780,7 +1784,7 @@ var Crud = /*#__PURE__*/function (_React$Component) {
       date: '',
       current_total: '',
       target: '',
-      img_url: ''
+      image: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.update = _this.update.bind(_assertThisInitialized(_this));
@@ -1800,24 +1804,27 @@ var Crud = /*#__PURE__*/function (_React$Component) {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
-      debugger;
       this.props.createProject(this.state);
     }
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "crud-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("head", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("head", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
         rel: "stylesheet",
         href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
         integrity: "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk",
         crossorigin: "anonymous"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "crud-background"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "crud-top"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "crud-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         "class": "crud-title"
-      }, "Start a New Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "crud-form"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, "Start a New Project"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         "class": "crud-input",
@@ -1858,13 +1865,15 @@ var Crud = /*#__PURE__*/function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         "class": "crud-input",
         type: "text",
-        value: this.state.img_url,
+        value: this.state.image,
         placeholder: "Image Url",
-        onChange: this.update('img_url')
+        onChange: this.update('image')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         "class": "crud-button",
         type: "submit"
-      }, "Submit")))));
+      }, "Submit"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "crud-bottom"
+      }))));
     }
   }]);
 
@@ -2011,7 +2020,9 @@ var Explore = /*#__PURE__*/function (_React$Component) {
         href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
         integrity: "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk",
         crossorigin: "anonymous"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.projects.map(function (project) {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "explore-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.projects.map(function (project) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           "class": "row row-cols-3"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2025,7 +2036,7 @@ var Explore = /*#__PURE__*/function (_React$Component) {
         }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "col-2"
         }));
-      })));
+      }))));
     }
   }]);
 
@@ -2214,21 +2225,7 @@ var Nav = /*#__PURE__*/function (_React$Component) {
         src: window.logo
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "nav_right"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": ".search-bar-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        "class": "search-bar",
-        type: "text",
-        placeholder: "Search Projects",
-        value: this.state.input,
-        onChange: this.updateInput('input')
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": search
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        "class": "search-results"
-      }, searchNames.map(function (project) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, project);
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
     }
   }]);
 
@@ -3048,7 +3045,12 @@ var ShowPage = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       if (!this.props.project) return null;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("head", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
+        integrity: "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk",
+        crossorigin: "anonymous"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "show-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         id: "show-title"
@@ -3068,8 +3070,100 @@ var ShowPage = /*#__PURE__*/function (_React$Component) {
         update: this.props.update,
         currentUser: this.props.currentUser
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "show-bottom"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Bottom")));
+        "class": "row row-cols-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "col-8"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "show-static-text"
+      }, "When a new tech product emerges, it often causes a lot of buzz. Avid early adopters are always on the lookout for new developments, waiting for the next Alexa or Ring Video Doorbell. But often the most talked-about and exciting tech is that which genuinely contributes to the greater good. To help you uncover some of these gems in the technology world, we asked a panel of Forbes Technology Council members to share their favorite tech innovations that give back. Their best answers are below. From the outside it may look like VR is an entertainment tool for gamers and content consumers. What most people fail to see is the potential of VR to transcend locality and enable humans to surpass the barriers of the physical. We\u2019re already seeing companies like Couch Travel that allow people to travel in real time around the world, even visiting several countries in one day. It\u2019s fascinating. As technologists, we often to forget to ask the question, \u201CWill this help the greater good?\u201D One up-and-coming technology that really might have an impact on the greater good is self-driving cars. Self-driving cars have the potential to dramatically reduce pollution, increase green spaces, give us all hours back in our day and eliminate the leading non-health-related cause of death. One technology that I am very bullish on is the water vapor extractor. While the tech has been around for a while, commercialization has not happened at a scale that will bring the cost down. Single-use plastics can be greatly reduced if reliable water can be provided at affordable cost anywhere. Water extracted from water vapor is pure and has little or no environmental hazards.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-1"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "show-static-img-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "row row-cols-8"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "col-1"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "img-fluid",
+        src: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "img-fluid",
+        src: "https://cdn.vox-cdn.com/thumbor/6F1y02SyqyTC8jZpCkABluORMyU=/0x0:5051x3325/1200x675/filters:focal(2187x1548:2995x2356)/cdn.vox-cdn.com/uploads/chorus_image/image/67671151/GettyImages_1264127359.0.jpg",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "img-fluid",
+        src: "data:image/jpeg;base64,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",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "col-1"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "row row-cols-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "col-1"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "img-fluid",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDU-PEy7yq2oWKyTl1GACX0moZhK0yLYmafw&usqp=CAU",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "img-fluid",
+        src: "https://images.ctfassets.net/cnu0m8re1exe/76s5MovgS3akKduvT4YQgH/15c9fc56fd92bd3d4e8b3be4f2404789/People-at-Work.jpg?fm=jpg&fl=progressive&w=660&h=433&fit=fill",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "col-1"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "row row-cols-8"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "col-1"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "img-fluid",
+        src: "https://cdn.aarp.net/content/dam/aarp/work/work_at_plus/2018/08/1140-working-after-retirement.imgcache.rev.web.900.513.jpg",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "img-fluid",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOrlRmq0kBLihi6oOo7usXTgBH8P7Be3dJJw&usqp=CAU",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        "class": "img-fluid",
+        src: "https://www.nasdaq.com/sites/acquia.prod/files/styles/720x400/public/2020/01/10/jobs-mooshny-adobe.jpg?h=6acbff97&itok=CXApkwf2",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "col-1"
+      }))));
     }
   }]);
 

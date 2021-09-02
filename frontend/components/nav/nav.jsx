@@ -50,7 +50,7 @@ class Nav extends React.Component {
           </Link>
         </div>
         <div id="nav_right">
-          <div class='.search-bar-container'>
+          {/* <div class='.search-bar-container'>
             <input class='search-bar' type="text" placeholder='Search Projects' value={this.state.input} onChange={this.updateInput('input')}/>
             <div class={search}>
               <ul class='search-results'>{
@@ -60,7 +60,7 @@ class Nav extends React.Component {
                 }
               </ul>
             </div>
-          </div>
+          </div> */}
           <Greeting_container />
         </div>
       </div>

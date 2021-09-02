@@ -25,14 +25,13 @@ class Api::ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     @project.user_id = current_user.id
-    #aws bull shit goes here
     if @project.save
       render "api/projects/show"
     else
       render json: @project.errors.full_messages, statuse: 422
     end
-
   end
+
 
   def project_params
     params.require(:project).permit(
@@ -41,7 +40,8 @@ class Api::ProjectsController < ApplicationController
       :description,
       :body,
       :category,
-      :date,
+      :image,
+      # :date,
       :current_total,
       :target
     )

@@ -35,20 +35,22 @@ class Explore extends React.Component {
             crossorigin="anonymous"
             />
           </body>
-          <ul>
-            {
-              this.props.projects.map(project =>
-                <div class="row row-cols-3">
-                  <div className="col-3"></div>
-                  <div className="col-6">
-                    <div className="article-container">
-                      <Article project={project}></Article>
+          <div class="explore-container">
+            <ul>
+              {
+                this.props.projects.map(project =>
+                  <div class="row row-cols-3">
+                    <div className="col-3"></div>
+                    <div className="col-6">
+                      <div className="article-container">
+                        <Article project={project}></Article>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-2"></div>
-                </div>)
-            }
-          </ul>
+                    <div className="col-2"></div>
+                  </div>)
+              }
+            </ul>
+          </div>
         </div>
       )
       

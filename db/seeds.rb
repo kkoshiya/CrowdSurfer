@@ -15,6 +15,7 @@ user_1 = User.create({name: 'Kyle', email: 'KingKyle@yahoo.com', password: 'pass
 user_2 = User.create({name: 'Ayana Flute', email: 'Ayana@baby.com', password: 'password' })
 user_3 = User.create({name: 'Luke BitcoinCash', email: 'lucklovescrypto@usFED.com', password: 'password', balance: 5000 })
 user_4 = User.create({name: 'Donald Trump', email: 'lucklovescrypto22@usFED.com', password: 'password', balance: 5000 })
+user_5 = User.create({name: 'Satoshi Nakamoto', email: 'lucklovescrypto22@usFED.com', password: 'password', balance: 5000 })
 
 #projects
 project_1 = Project.create({
@@ -258,5 +259,18 @@ project_20 = Project.create({
   image: 'corona.png',
   days: 38
 })
+
+project_21 = Project.create({
+  user_id: user_2.id,
+  title: "Godzilla IX - The Return of the Return of Lizardoon",
+  body: "Appa ice is really good for the skin and water is clean",
+  description: "Pokemon and Marvel what is not to like about this project plus there are girls and money",
+  category: "film",
+  current_total: 1500,
+  target: 30000,
+  image: 'chinpokomon.png',
+  days: 38
+})
+
 
 

@@ -27,7 +27,7 @@ class Subscribe extends React.Component {
           <form>
             <label id="subscribe-1">Discover the best and brightest projects on Kickstarter.
               <br/>
-              <h3 id="subscribe-2">Sign up to receive our weekly Projects We Love newsletter.</h3>
+              <div id="subscribe-2">Sign up to receive our weekly Projects We Love newsletter.</div>
               <br/>
               <input id={status} placeholder={text} type="text"/>
             </label>

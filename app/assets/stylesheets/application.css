@@ -425,7 +425,7 @@ table {
 }
 
 #rocket {
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   animation-name: example;
   animation-duration: 3s;
@@ -475,6 +475,8 @@ table {
 
 #log-in-page {
   padding-bottom: 5%;
+  z-index: -5;
+  background-color: lightgrey;
 }
 
 .log-in > :first-child {
@@ -847,29 +849,46 @@ progress[value]::-webkit-progress-value {
   font-weight: bold;
   font-size: 36px;
   margin-bottom: 2%;
+  margin-top: 2%;
 }
 
 .crud-button {
   background-color: lightgreen;
   height: 30px;
   width: 250px;
-  margin-bottom: 15px;
-  margin-top: 2%;
+  margin-bottom: 10%;
+  margin-top: 3%;
 }
 
 .crud-input {
-  width: 40%;
+  width: 70%;
   height: 10%;
   margin-bottom: 1%;
   border: 1px solid black;
-
 }
 
 
+.crud-background {
+  background-color: lightgrey;
+}
+
+.crud-top {
+  padding-bottom: 5%;
+  background-color: lightgrey;
+}
+
+.crud-bottom {
+  padding-top: 5%;
+  background-color: lightgrey;
+}
 
 a {
   color: black !important;
   text-decoration: none !important;
+}
+
+.login-text {
+  color: black !important;
 }
 
 .article-container {
@@ -882,6 +901,7 @@ a {
 
 .article-img {
   width: 50%;
+  border: #009E74 4px solid;
 }
 
 .article-title {
@@ -896,4 +916,26 @@ a {
 .article-user {
   padding-top: 2%;
   font-size: 85%;
+}
+
+.crud-container {
+  border: #009E74 4px solid;
+  background-color: white;
+  margin-bottom: 5%;
+  margin-right: 35%;
+  margin-left: 35%;
+}
+
+.show-static-text {
+  font-weight: 500;
+  font-size: 120%;
+}
+
+.show-static-img-container {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.explore-container {
+  background-color: lightgray;
 }
